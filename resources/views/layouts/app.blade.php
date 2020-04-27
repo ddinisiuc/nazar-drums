@@ -14,7 +14,6 @@
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" type="text/css"  href="{{ asset('/css/style.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('/css/colors/green.css') }}" id="colors">
 <link rel="stylesheet" type="text/css"  href="{{ asset('/css/colors/blue.css') }}" id="colors">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
      <title>Nazar-Drums</title>

@@ -9,10 +9,6 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <!-- Category -->
-                        <ul class="post-categories">
-                            <li><a href="#">Technology</a></li>
-                        </ul>
 
                         <!-- Title -->
                         <h2>Snooze-Worthy Watches</h2>
