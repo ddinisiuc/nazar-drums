@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 @section('content')
 <div id="header-container" data-background="images/shop-parallax.jpg" data-color="#303133" data-color-opacity="0.7">
     @include('layouts.includes.header')
@@ -274,7 +274,8 @@
 <div id="backtotop">
     <a href="#"></a>
 </div>
-@endsection @section('scripts')
+@endsection
+@section('scripts')
 <!-- Scripts
 ================================================== -->
 <script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>

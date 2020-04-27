@@ -29,7 +29,7 @@
 <div class="gutter-30px isotope-four-cols blog-wrapper isotope-wrapper fw">
 
 	<div class="isotope-sizer"></div>
-	
+
 	<!-- Item -->
 	<div class="isotope-item">
 		<!-- Post -->
@@ -53,8 +53,8 @@
 			</div>
 
 		</div>
-	</div>	
-			
+	</div>
+
 	<!-- Item -->
 	<div class="isotope-item">
 		<!-- Post -->
@@ -76,7 +76,7 @@
 				<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae, tempus sed augue.</p>
 			</div>
 		</div>
-	</div>		
+	</div>
 
 	<!-- Item -->
 	<div class="isotope-item">
@@ -99,7 +99,7 @@
 				<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae, tempus sed augue.</p>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<!-- Item -->
 	<div class="isotope-item">
@@ -159,7 +159,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Item -->
 	<div class="isotope-item">
 		<!-- Post -->
@@ -204,7 +204,7 @@
 				<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae, tempus sed augue.</p>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 	<!-- Item -->
 	<div class="isotope-item">
@@ -227,7 +227,7 @@
 				<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae, tempus sed augue.</p>
 			</div>
 		</div>
-	</div>	
+	</div>
 
 </div>
 <!-- Isotope Wrapper / End -->
@@ -252,7 +252,7 @@
 		</div>
 	</div>
     <div class="clearfix"></div>
-			
+
 			<div class="margin-top-50"></div>
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 @section('content')
 
 <div id="header-container" data-background="images/shop-parallax.jpg" data-color="#303133" data-color-opacity="0.7">
@@ -319,7 +319,8 @@
 
 </section>
 <!-- Testimonials / End -->
-@endsection @section('scripts')
+@endsection
+@section('scripts')
 
 <!-- Back To Top Button -->
 <div id="backtotop">
@@ -440,8 +441,8 @@
     }); /*ready*/
 </script>
 
-<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-	(Load Extensions only on Local File Systems ! 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+	(Load Extensions only on Local File Systems !
 	The following part can be removed on Server for On Demand Loading) -->
 <script type="text/javascript" src="scripts/extensions/revolution.extension.actions.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.carousel.min.js"></script>

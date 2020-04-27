@@ -24,8 +24,11 @@
 	<div id="loader"></div>
 </div>
 <div id="wrapper">
+
     @yield('content')
+
     @include('layouts.includes.footer')
+    
     @yield('scripts')
 </div>
 </body>

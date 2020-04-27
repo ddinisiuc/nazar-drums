@@ -52,17 +52,26 @@
 
 		<div class="col-md-4">
 			<ul class="details alt">
-				<li><span>Date:</span> 11 January 2016</li>
-				<li><span>Location:</span> London</li>
-				<li><span>Category:</span> <a href="#">Kitchens</a>, <a href="#">Carpentry</a></li>
+				<li><span>Product Name:</span> My name</li>
+				<li><span>Price:</span> $100</li>
+				<li><span>Post :</span> <a href="#">Post Name (how it was made)</a>
 			</ul>
 
-			<a href="#" class="button fw medium border margin-top-15">Launch Project</a>
+			<a href="#" class="button fw medium border margin-top-15">Оставить заявку</a>
 		</div>
 	</div>
 
 </div>
-
+<section>
+   <div class="container">
+    Contact form popup with selected instrument
+   </div>
+</section>
+<section>
+    <div class="container">
+        related products
+    </div>
+</section>
 
 
 <!-- Footer
@@ -95,7 +104,7 @@
 					<li><a href="#">Testimonials</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-			</div>		
+			</div>
 
 			<div class="col-md-3  col-sm-12">
 				<h4>Contact Us</h4>
@@ -108,7 +117,7 @@
 			</div>
 
 		</div>
-		
+
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">

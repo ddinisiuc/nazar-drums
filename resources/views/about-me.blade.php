@@ -166,7 +166,7 @@
 <!-- Container / End -->
 
 <!-- Image Edge -->
-<div class="image-edge dark left margin-top-60 margin-bottom-0">
+<div class="image-edge dark left margin-bottom-0">
 
     <div class="image-edge-content">
         <h3 class="about-me-title margin-bottom-25"><strong>Get In Touch</strong></h3>
@@ -207,7 +207,8 @@
 <div id="backtotop">
     <a href="#"></a>
 </div>
-@endsection @section('scripts')
+@endsection
+@section('scripts')
 <!-- Scripts
 ================================================== -->
 <script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>

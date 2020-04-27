@@ -1,43 +1,43 @@
 @extends('layouts.app')
 @section('content')
 <div id="header-container" data-background="images/blog-post-header.jpg" data-color="#303133"data-color-opacity="0.6">
-@include('layouts.includes.header')
-<!-- Titlebar
-================================================== -->
-<div id="titlebar" class="single-post-titlebar">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
+    @include('layouts.includes.header')
+    <!-- Titlebar
+    ================================================== -->
+    <div id="titlebar" class="single-post-titlebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
 
-							<!-- Category -->
-							<ul class="post-categories">
-								<li><a href="#">Technology</a></li>
-							</ul>
+                        <!-- Category -->
+                        <ul class="post-categories">
+                            <li><a href="#">Technology</a></li>
+                        </ul>
 
-							<!-- Title -->
-							<h2>Snooze-Worthy Watches</h2>
+                        <!-- Title -->
+                        <h2>Snooze-Worthy Watches</h2>
 
-							<!-- Meta Tags -->
-							<div class="meta-tags">
-								<span>August 10, 2016</span>
-								<span><a href="#">4 Comments</a></span>
-								<span>by <a href="#">John Doe</a></span>
-							</div>
+                        <!-- Meta Tags -->
+                        <div class="meta-tags">
+                            <span>August 10, 2016</span>
+                            <span><a href="#">4 Comments</a></span>
+                            <span>by <a href="#">John Doe</a></span>
+                        </div>
 
-							<!-- Nav -->
-							<ul id="portfolio-nav">
-								<li class="next"><a href="#" class="tooltip left" title="Next Post"><i
-											class="sl sl-icon-arrow-right"></i></a></li>
-								<li class="prev"><a href="#" class="tooltip right" title="Previous Posts"><i
-											class="sl sl-icon-arrow-left"></i></a></li>
-							</ul>
+                        <!-- Nav -->
+                        <ul id="portfolio-nav">
+                            <li class="next"><a href="#" class="tooltip left" title="Next Post"><i
+                                        class="sl sl-icon-arrow-right"></i></a></li>
+                            <li class="prev"><a href="#" class="tooltip right" title="Previous Posts"><i
+                                        class="sl sl-icon-arrow-left"></i></a></li>
+                        </ul>
 
-						</div>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		</div>
+    </div>
 		<div class="clearfix"></div>
 
 		<!-- Content
@@ -49,13 +49,7 @@
 				<div class="single-post-content">
 
 					<div class="col-md-10 col-md-offset-1">
-						<p>Nullam massa velit, interdum eu purus vitae, ornare congue justo. Duis ac odio elit. Etiam
-							egestas nulla ut quam molestie suscipit. Quisque maximus dui lacinia cursus gravida.
-							Maecenas eget leo nibh. Duis commodo ante nec erat molestie, eget porta. Vestibulum eget
-							molestie ligula. Suspendisse fringilla, risus eu rutrum dapibus, risus tortor ullamcorper
-							purus.</p>
-
-						<h3>An Awesome Photo Grid</h3>
+						<h2>An Awesome Photo Grid</h2>
 						<p>Aliquam sit amet euismod purus, sed commodo ipsum. Morbi sodales consectetur ex vitae
 							molestie. Morbi ultrices rhoncus felis et vehicula. Ut maximus, dui nec mollis laoreet,
 							turpis arcu congue elit, quis congue ipsum lacus et velit. Vivamus cursus, libero in
@@ -239,7 +233,7 @@
 
 <div id="style-switcher">
 	<h2>Color Switcher <a href="#"><i class="sl sl-icon-settings"></i></a></h2>
-	
+
 	<div>
 		<ul class="colors" id="color1">
 			<li><a href="#" class="blue" title="Blue"></a></li>
