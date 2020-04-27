@@ -62,72 +62,77 @@
 	</div>
 
 </div>
+  <!-- Container / Start -->
 <section>
-   <div class="container">
-    Contact form popup with selected instrument
-   </div>
-</section>
-<section>
-    <div class="container">
-        related products
-    </div>
-</section>
+<div class="container">
 
+<div class="row">
 
-<!-- Footer
-================================================== -->
-<div class="margin-top-65"></div>
+	<!-- Contact Form -->
+	<div class="col-md-8 col-md-offset-2">
 
-<div id="footer">
-	<!-- Main -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5 col-sm-6">
-				<h4>About</h4>
-				<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
-				<a href="#" class="button social-btn"><i class="fa fa-facebook-official"></i> Like Us on Facebook</a>
-			</div>
+		<section id="contact">
+			<h3 class="headline centered margin-bottom-45">Get In Touch</h3>
 
-			<div class="col-md-4  col-sm-6">
-				<h4>Helpful Links</h4>
-				<ul class="footer-links">
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Press Releases</a></li>
-					<li><a href="#">Careers</a></li>
-					<li><a href="#">Services</a></li>
-					<li><a href="#">Projects</a></li>
-				</ul>
+			<div id="contact-message"></div> 
 
-				<ul class="footer-links">
-					<li><a href="#">In the News</a></li>
-					<li><a href="#">Our Blog</a></li>
-					<li><a href="#">Testimonials</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</div>
+				<form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="on">
 
-			<div class="col-md-3  col-sm-12">
-				<h4>Contact Us</h4>
-				<div class="text-widget">
-					<span>12345 Little Lonsdale St, Melbourne</span> <br>
-					Phone: <span>(123) 123-456 </span><br>
-					Fax: <span>(123) 123-456</span> <br>
-					E-Mail:<span> office@example.com </span><br>
+				<div class="row">
+					<div class="col-md-6">
+						<div>
+							<input name="name" type="text" id="name" placeholder="Your Name" required="required" />
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div>
+							<input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
+						</div>
+					</div>
 				</div>
-			</div>
 
+				
+
+				<div>
+					<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
+				</div>
+
+				<input type="submit" class="submit button border center margin-top-10" id="submit" value="Submit Message" />
+
+				</form>
+		</section>
+	</div>
+</section>
+	<!-- Contact Form / End -->
+<section>
+		<!-- Logo Carousel 2 -->
+		<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="headline centered with-border margin-top-60 margin-bottom-50">Logo Carousel Style 1</h3>
 		</div>
-
-		<!-- Copyright -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="copyrights">©  Copyright 2016 by <a href="#">Sphene</a>. All Rights Reserved.</div>
-			</div>
-		</div>
-
 	</div>
 
+	<div class="row">
+		<div class="col-md-12">
+			
+			<!-- Carousel -->
+			<div class="logo-carousel-alt">
+			    <div class="item"><img src="images/logo-01.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-02.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-03.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-04.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-05.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-06.png" alt="" /></div>
+			    <div class="item"><img src="images/logo-07.png" alt="" /></div>
+			</div>
+
+		</div>
+	</div>
 </div>
+</section>
+<!-- Logo Carousel 2 / End -->
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
