@@ -92,7 +92,12 @@
 					</div>
 				</div>
 				
-
+				<div class="form-group col-md-14">
+      					<select id="inputState" class="form-control">
+        					<option selected>Choose...</option>
+        					<option>...</option>
+      					</select>
+    			</div>
 				<div>
 					<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
 				</div>
