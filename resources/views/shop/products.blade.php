@@ -124,7 +124,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-01.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Red Backpack</h5></a>
                                 <span class="sale"><del>$49</del> <mark>$39</mark></span>
@@ -138,7 +137,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-02.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Casual Shoes</h5></a>
                                 <span class="sale">$79</span>
@@ -152,7 +150,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-03.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Cap</h5></a>
                                 <span class="sale"><del>$10</del> <mark>$6</mark></span>
@@ -166,7 +163,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-04.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Watch</h5></a>
                                 <span class="sale">$179</span>
@@ -180,7 +176,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-05.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Sunglasses</h5></a>
                                 <span class="sale"><del>$29</del> <mark>$25</mark></span>
@@ -194,7 +189,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-06.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Wallet</h5></a>
                                 <span class="sale"><del>$79</del> <mark>$69</mark></span>
@@ -208,7 +202,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-07.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Shirt</h5></a>
                                 <span class="sale">$19</span>
@@ -222,7 +215,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-08.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>T-Shirt</h5></a>
                                 <span class="sale"><del>$19</del> <mark>$14</mark></span>
@@ -236,7 +228,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-09.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Tie</h5></a>
                                 <span class="sale">$9</span>
