@@ -41,8 +41,18 @@
 								<li class="dropdown">
 									<a href="{{ route('index') }}" class="current">Home</a>
 								</li>
-								<li>
+								
+								
+								<li class="dropdown">
 									<a href="{{ route('projects') }}">My projects</a>
+									<ul>
+										<li>
+											<a href="{{ route('projects') }}">My projects</a>
+										</li>
+										<li>
+											<a href="{{ route('projects') }}">My projects</a>
+										</li>
+									</ul>
 								</li>
 								<li class="dropdown" >
 									<a href="{{ route('shop') }}">Shop</a>
