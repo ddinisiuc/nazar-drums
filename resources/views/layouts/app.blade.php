@@ -15,6 +15,7 @@
 ================================================== -->
 <link rel="stylesheet" type="text/css"  href="{{ asset('/css/style.css') }}">
 <link rel="stylesheet" type="text/css"  href="{{ asset('/css/colors/blue.css') }}" id="colors">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
      <title>Nazar-Drums</title>
 </head>
@@ -28,7 +29,7 @@
 
     @include('layouts.includes.footer')
     
+    @include('layouts.includes.scripts')
     @yield('scripts')
-</div>
 </body>
 </html>

@@ -33,21 +33,18 @@
             <!-- Price Range -->
             <div class="widget margin-bottom-50">
                 <div class="headline no-margin">
-                    <h4>Filter by Price</h4></div>
+                    <h4>Категории</h4></div>
 
                 <div class="list-group">
-                    <li>
+                    
                         <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
+                    
                         <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
+                   
                         <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
+                   
                         <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
+                    
 
                 </div>
 
@@ -265,32 +262,4 @@
 <div id="backtotop">
     <a href="#"></a>
 </div>
-@endsection
-@section('scripts')
-<!-- Scripts
-================================================== -->
-<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-<script type="text/javascript" src="scripts/counterup.min.js"></script>
-<script type="text/javascript" src="scripts/waypoints.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.sticky-kit.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.twentytwenty.js"></script>
-<script type="text/javascript" src="scripts/jquery.event.move.js"></script>
-<script type="text/javascript" src="scripts/jquery.photogrid.js"></script>
-<script type="text/javascript" src="scripts/jquery.tooltips.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.pricefilter.js"></script>
-<script type="text/javascript" src="scripts/jquery.stacktable.js"></script>
-<script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
-<script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
-<script type="text/javascript" src="scripts/headroom.min.js"></script>
-<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
-<script type="text/javascript" src="scripts/puregrid.js"></script>
-<script type="text/javascript" src="scripts/flexibility.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
-
 @endsection
