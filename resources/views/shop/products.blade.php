@@ -35,18 +35,22 @@
                 <div class="headline no-margin">
                     <h4>Категории</h4></div>
 
-                <div class="list-group">
-                    
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                   
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                   
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    
-
-                </div>
+                
+                <ul class="list-group category_list">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="" style="text-decoration: none;"> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href=""> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href=""> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">1</span>
+                    </li>
+                </ul>
+                
 
             </div>
 
