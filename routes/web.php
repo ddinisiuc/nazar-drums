@@ -10,10 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', 'FrontendController@index')->name('index');
 
 Route::get('/shop', function () {
     return view('shop.products');
@@ -43,6 +44,4 @@ Route::get('/about-me', function () {
     return view('about-me');
 })->name('about-me');
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+
