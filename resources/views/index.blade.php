@@ -36,7 +36,7 @@
             @endforeach
 
             <!-- Slide  -->
-            <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
+            {{-- <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
 
                 <!-- Background -->
                 <img src="images/slide-corporate-02.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="112" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
@@ -51,7 +51,7 @@
                     <a href="#" class="button medium">Read More</a>
                 </div>
 
-            </li>
+            </li> --}}
 
         </ul>
         <div class="tp-static-layers"></div>
@@ -155,17 +155,20 @@
     </div>
 
     <!-- Item -->
-    <div class="isotope-item print">
-        <a href="single-project-creative-style-2.html">
-            <img src="images/project-02.jpg" alt="">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h4>Bilboard</h4>
-                    <span>February 2016</span>
+    {{-- @foreach ($products as $item)
+        <div class="isotope-item  @if($loop->first) print  @endif @if($loop->last) identity @endif">
+            <a href="{{ $item->slug }}">
+                <img src="{{ Voyager::image($item) }}" alt="">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>{{ $item->title }}</h4>
+                        <span>{{ $item }}</span>
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
+    @endforeach --}}
+
 
     <!-- Item -->
     <div class="isotope-item identity">
@@ -273,50 +276,20 @@
 <!-- Testimonials -->
 <section class="section-background with-testimonials" data-background-color="#222c42">
 
-    <h3>Who We Work With</h3>
+    <h3>Отзывы</h3>
 
     <div class="testimonial-carousel full-width arrows">
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Simple and clean - that's what people and me like the most. Beautifully crafted, well organized and thoroughly documented.</p>
-                <div class="testimonial-author">
-                    <h4>Garret Gravesen</h4>
-                    <span>Envato</span>
+        @foreach ($testimonials as $item)
+            <div class="item">
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        {!! $item->description !!}
+                        <h4>{{ $item->title }}</h4>
+                        <span>Envato</span>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Sphene is ridiculously powerful and easy to use, beginner or advanced. Always been on the hunt for handcrafted, clean themes.</p>
-                <div class="testimonial-author">
-                    <h4>Robert Lindstrom</h4>
-                    <span>Google</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>What impressed me was the fast response to questions and helpful community conversation in the support forums.</p>
-                <div class="testimonial-author">
-                    <h4>Thomas Johnson</h4>
-                    <span>Microsoft</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Sphene is ridiculously powerful and easy to use, beginner or advanced. Always been on the hunt for handcrafted, clean themes.</p>
-                <div class="testimonial-author">
-                    <h4>John Smith</h4>
-                    <span>Adobe</span>
-                </div>
-            </div>
-        </div>
-
+        @endforeach
     </div>
 
 </section>

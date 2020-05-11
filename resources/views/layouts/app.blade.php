@@ -19,16 +19,16 @@
      <title>Nazar-Drums</title>
 </head>
 <body>
- <div id="loader-wrapper">
-	<div id="loader"></div>
-</div>
-<div id="wrapper">
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+    <div id="wrapper">
 
-    @yield('content')
+        @yield('content')
 
-    @include('layouts.includes.footer')
-    
-    @yield('scripts')
-</div>
+        @include('layouts.includes.footer')
+
+        @yield('scripts')
+    </div>
 </body>
 </html>
