@@ -57,7 +57,7 @@
 				<li><span>Post :</span> <a href="#">Post Name (how it was made)</a>
 			</ul>
 
-			<a href="#" class="button fw medium border margin-top-15">Оставить заявку</a>
+			<!-- <a href="#" class="button fw medium border margin-top-15">Оставить заявку</a> -->
 		</div>
 	</div>
 
@@ -114,7 +114,7 @@
 		<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="headline centered with-border margin-top-60 margin-bottom-50">Logo Carousel Style 1</h3>
+			<h3 class="headline left with-border margin-top-60 margin-bottom-50">Related products</h3>
 		</div>
 	</div>
 
@@ -140,31 +140,4 @@
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
-@endsection
-@section('scripts')
-<!-- Scripts
-================================================== -->
-<script type="text/javascript" src="{{ asset('scripts/jquery-2.2.0.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.flexslider-min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/owl.carousel.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/counterup.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/waypoints.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.themepunch.tools.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.themepunch.revolution.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.isotope.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.magnific-popup.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.sticky-kit.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.twentytwenty.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.event.move.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.photogrid.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.tooltips.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.pricefilter.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.stacktable.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.contact-form.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/jquery.jpanelmenu.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/headroom.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/modernizr.custom.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/puregrid.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/flexibility.js') }}"></script>
-<script type="text/javascript" src="{{ asset('scripts/custom.js') }}') }}"></script>
 @endsection

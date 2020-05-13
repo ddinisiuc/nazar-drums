@@ -33,23 +33,24 @@
             <!-- Price Range -->
             <div class="widget margin-bottom-50">
                 <div class="headline no-margin">
-                    <h4>Filter by Price</h4></div>
+                    <h4>Категории</h4></div>
 
-                <div class="list-group">
-                    <li>
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="list-group-item list-group-item-action"> Cras justo odio</a>
-                    </li>
 
-                </div>
+                <ul class="list-group category_list">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href="" style="text-decoration: none;"> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href=""> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a href=""> Cras justo odio</a>
+                        <span class="badge badge-primary badge-pill">1</span>
+                    </li>
+                </ul>
+
 
             </div>
 
@@ -144,7 +145,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-02.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Casual Shoes</h5></a>
                                 <span class="sale">$79</span>
@@ -158,7 +158,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-03.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Cap</h5></a>
                                 <span class="sale"><del>$10</del> <mark>$6</mark></span>
@@ -172,7 +171,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-04.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Watch</h5></a>
                                 <span class="sale">$179</span>
@@ -186,7 +184,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-05.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Sunglasses</h5></a>
                                 <span class="sale"><del>$29</del> <mark>$25</mark></span>
@@ -200,7 +197,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-06.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Wallet</h5></a>
                                 <span class="sale"><del>$79</del> <mark>$69</mark></span>
@@ -214,7 +210,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-07.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Shirt</h5></a>
                                 <span class="sale">$19</span>
@@ -228,7 +223,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-08.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>T-Shirt</h5></a>
                                 <span class="sale"><del>$19</del> <mark>$14</mark></span>
@@ -242,7 +236,6 @@
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-09.jpg" alt="" /></a>
                         <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
                             <figcaption class="item-description">
                                 <a href="shop-detail"><h5>Tie</h5></a>
                                 <span class="sale">$9</span>
@@ -280,32 +273,4 @@
 <div id="backtotop">
     <a href="#"></a>
 </div>
-@endsection
-@section('scripts')
-<!-- Scripts
-================================================== -->
-<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-<script type="text/javascript" src="scripts/counterup.min.js"></script>
-<script type="text/javascript" src="scripts/waypoints.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.sticky-kit.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.twentytwenty.js"></script>
-<script type="text/javascript" src="scripts/jquery.event.move.js"></script>
-<script type="text/javascript" src="scripts/jquery.photogrid.js"></script>
-<script type="text/javascript" src="scripts/jquery.tooltips.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.pricefilter.js"></script>
-<script type="text/javascript" src="scripts/jquery.stacktable.js"></script>
-<script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
-<script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
-<script type="text/javascript" src="scripts/headroom.min.js"></script>
-<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
-<script type="text/javascript" src="scripts/puregrid.js"></script>
-<script type="text/javascript" src="scripts/flexibility.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
-
 @endsection
