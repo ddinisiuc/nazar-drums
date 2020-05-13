@@ -145,7 +145,6 @@
                         </figure>
                     </div>
                 </div>
-
                 <!-- Product -->
                 <div class="col-md-4 col-xs-12 isotope-item">
                     <div class="shop-item">
