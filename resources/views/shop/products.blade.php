@@ -120,20 +120,26 @@
                 <div class="isotope-sizer"></div>
 
                 <!-- Product -->
-                <div class="col-md-4 col-xs-12 isotope-item">
-                    <div class="shop-item">
-                        <a href="shop-detail"><img src="images/shop-01.jpg" alt="" /></a>
-                        <figure>
-                            <a href="#" class="add-to-cart"><i class="sl sl-icon-basket"></i></a>
-                            <figcaption class="item-description">
-                                <a href="shop-detail"><h5>Red Backpack</h5></a>
-                                <span class="sale"><del>$49</del> <mark>$39</mark></span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
+                @if ($products->isNotEmpty())
+                    @foreach ($products as $item)
+                        <div class="col-md-4 col-xs-12 isotope-item">
+                            <div class="shop-item">
+                                <a href="{{ route('product_detail', $item->slug) }}">
+                                    <img src="{{ Voyager::image($item->image) }}" alt="" />
+                                </a>
+                                <figure>
+                                    <figcaption class="item-description">
+                                        <a href="{{ route('product_detail', $item->slug) }}"><h5>{{ $item->title }}</h5></a>
+                                        <span class="sale"><del>${{ $item->old_price }}</del> <mark>${{ $item->price }}</mark></span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
 
-                <!-- Product -->
+
+                {{-- <!-- Product -->
                 <div class="col-md-4 col-xs-12 isotope-item">
                     <div class="shop-item">
                         <a href="shop-detail"><img src="images/shop-02.jpg" alt="" /></a>
@@ -243,7 +249,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
 

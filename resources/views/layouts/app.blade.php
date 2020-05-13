@@ -19,9 +19,9 @@
      <title>Nazar-Drums</title>
 </head>
 <body>
-    <div id="loader-wrapper">
+    {{-- <div id="loader-wrapper">
         <div id="loader"></div>
-    </div>
+    </div> --}}
     <div id="wrapper">
 
         @yield('content')

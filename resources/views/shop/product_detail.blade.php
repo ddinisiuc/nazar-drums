@@ -74,7 +74,7 @@
 		<section id="contact">
 			<h3 class="headline centered margin-bottom-45">Get In Touch</h3>
 
-			<div id="contact-message"></div> 
+			<div id="contact-message"></div>
 
 				<form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="on">
 
@@ -91,7 +91,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="form-group col-md-14">
       					<select id="inputState" class="form-control">
         					<option selected>Choose...</option>
@@ -120,7 +120,7 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			
+
 			<!-- Carousel -->
 			<div class="logo-carousel-alt">
 			    <div class="item"><img src="images/logo-01.png" alt="" /></div>
@@ -144,27 +144,27 @@
 @section('scripts')
 <!-- Scripts
 ================================================== -->
-<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
-<script type="text/javascript" src="scripts/counterup.min.js"></script>
-<script type="text/javascript" src="scripts/waypoints.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.sticky-kit.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.twentytwenty.js"></script>
-<script type="text/javascript" src="scripts/jquery.event.move.js"></script>
-<script type="text/javascript" src="scripts/jquery.photogrid.js"></script>
-<script type="text/javascript" src="scripts/jquery.tooltips.min.js"></script>
-<script type="text/javascript" src="scripts/jquery.pricefilter.js"></script>
-<script type="text/javascript" src="scripts/jquery.stacktable.js"></script>
-<script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
-<script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
-<script type="text/javascript" src="scripts/headroom.min.js"></script>
-<script type="text/javascript" src="scripts/modernizr.custom.js"></script>
-<script type="text/javascript" src="scripts/puregrid.js"></script>
-<script type="text/javascript" src="scripts/flexibility.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery-2.2.0.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.flexslider-min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/counterup.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/waypoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.themepunch.tools.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.themepunch.revolution.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.isotope.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.sticky-kit.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.twentytwenty.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.event.move.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.photogrid.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.tooltips.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.pricefilter.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.stacktable.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.contact-form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery.jpanelmenu.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/headroom.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/modernizr.custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/puregrid.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/flexibility.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/custom.js') }}') }}"></script>
 @endsection

@@ -29,7 +29,7 @@
                             {{ $item->title }}
                         </div>
 
-                        <div class="caption-text">Interactively procrastinate high-payoff content without backward-compatible data. Quickly cultivate optimal processes and tactical architectures.</div>
+                        <div class="caption-text">{{ $item->excerpt }}</div>
                         <a href="{{ $item->btn_link }}" class="button medium">{{ $item->btn_label }}</a>
                     </div>
                 </li>
@@ -267,7 +267,7 @@
 <div class="info-banner-fw">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">Create Your Own Web Masterpiece <a href="contact.html">Contact Us</a></div>
+            <div class="col-md-12">Заказать индивидуальный бубен  <a href="contact.html">Contact Us</a></div>
         </div>
     </div>
 </div>

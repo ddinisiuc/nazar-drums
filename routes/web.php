@@ -16,13 +16,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/', 'FrontendController@index')->name('index');
 
-Route::get('/shop', function () {
-    return view('shop.products');
-})->name('shop');
+Route::get('/shop', 'FrontendController@shop')->name('shop');
 
-Route::get('/shop-detail', function () {
-    return view('shop.product-detail');
-})->name('shop-detail');
+Route::get('/product-detail/{slug}', 'FrontendController@productDetail')->name('product_detail');
 
 Route::get('/projects', function () {
     return view('projects');
