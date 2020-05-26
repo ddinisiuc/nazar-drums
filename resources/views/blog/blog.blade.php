@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
 <div id="header-container" data-color="#202122" data-color-opacity="1">
 @include('layouts.includes.header')
 <!-- Titlebar
@@ -19,9 +18,6 @@
 	</div>
 
 </div>
-
-
-
 <!-- Content
 ================================================== -->
 

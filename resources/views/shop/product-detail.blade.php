@@ -4,10 +4,10 @@
 @include('layouts.includes.header')
 <!-- Titlebar
 ================================================== -->
-<div id="titlebar" class="centered">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
+	<div id="titlebar" class="centered">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
 
 				<h2>Single Project - Content Bottom</h2>
 
@@ -17,10 +17,10 @@
 					<li class="prev"><a href="single-project-content-left.html"><i class="sl sl-icon-arrow-left"></i></a></li>
 				</ul>
 
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 </div>
 <div class="clearfix"></div>
@@ -137,7 +137,125 @@
 </div>
 </section>
 <!-- Logo Carousel 2 / End -->
+<!-- Content
+================================================== -->
+<div class="container">
+	<div class="row">
 
+
+			<!-- Reviews -->
+			<section class="comments">
+			<h3 class="headline margin-bottom-45">Comments <span class="comments-amount">(4)</span></h3>
+
+				<ul>
+					<li>
+						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+						<div class="comment-content"><div class="arrow-comment"></div>
+							<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
+								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
+							</div>
+							<p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
+						</div>
+
+						<ul>
+							<li>
+								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+								<div class="comment-content"><div class="arrow-comment"></div>
+									<div class="comment-by">Tom Smith<span class="date">12th, June 2015</span>
+										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
+									</div>
+									<p>Rrhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque.</p>
+								</div>
+							</li>
+							<li>
+								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+								<div class="comment-content"><div class="arrow-comment"></div>
+									<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
+										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
+									</div>
+									<p>Nam posuere tristique sem, eu ultricies tortor.</p>
+								</div>
+
+								<ul>
+									<li>
+										<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+										<div class="comment-content"><div class="arrow-comment"></div>
+											<div class="comment-by">John Doe<span class="date">12th, June 2015</span>
+												<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
+											</div>
+											<p>Great template!</p>
+										</div>
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+
+					</li>
+
+					<li>
+						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
+						<div class="comment-content"><div class="arrow-comment"></div>
+							<div class="comment-by">John Doe<span class="date">15th, May 2015</span>
+								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
+							</div>
+							<p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
+						</div>
+
+					</li>
+				 </ul>
+
+			</section>
+			<div class="clearfix"></div>
+			<div class="margin-top-35"></div>
+
+
+			<!-- Add Comment -->
+			<h3 class="headline">Add Comment</h3>
+			<div class="margin-top-15"></div>
+			
+			<!-- Add Comment Form -->
+			<form id="add-comment" class="add-comment">
+				<fieldset>
+
+					<div>
+						<label>Name:</label>
+						<input type="text" value=""/>
+					</div>
+						
+					<div>
+						<label>Email: <span>*</span></label>
+						<input type="text" value=""/>
+					</div>
+
+					<div>
+						<label>Comment: <span>*</span></label>
+						<textarea cols="40" rows="3"></textarea>
+					</div>
+
+				</fieldset>
+
+				<a href="#" class="button color border medium">Add Comment</a>
+				<div class="clearfix"></div>
+				<div class="margin-bottom-20"></div>
+
+			</form>
+
+	</div>
+	<!-- Content / End -->
+
+
+	
+		<div class="margin-bottom-40"></div>
+
+	
+	
+
+	</div>
+</div>
+</div>
+
+<!-- Container / End -->
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
 @endsection

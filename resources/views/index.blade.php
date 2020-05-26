@@ -326,9 +326,6 @@
 @endsection
 @section('scripts')
 
-
-<!-- -->
-
 <!-- REVOLUTION SLIDER SCRIPT -->
 <script type="text/javascript">
     var tpj = jQuery;
