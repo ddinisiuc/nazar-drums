@@ -34,9 +34,14 @@
 
         <div class="col-md-4">
             <ul class="details alt2">
-                <li><span>Дата создания проекта:</span>{{ strftime("%B %d, %Y", strtotime($project->created_at)) }} </li>
+                <li><span>Дата создания проекта: </span>{{ strftime("%B %d, %Y", strtotime($project->created_at)) }} </li>
                 <li><span>Локация:</span> {{ $project->location }}</li>
-                {{-- <li><span>Category:</span> <a href="#">Kitchens</a>, <a href="#">Carpentry</a></li> --}}
+                @if ($project->link)
+                    <li><span>Сайт:</span> <a href="{{ $project->link }}" target="_blank">{{ $project->link }}</a></li>
+                @endif
+                @if ($project->facebook)
+                    <li><span>Facebook:</span> <a href="{{ $project->facebook }}" target="_blank">{{ $project->facebook }}</a></li>
+                @endif
             </ul>
         </div>
     </div>

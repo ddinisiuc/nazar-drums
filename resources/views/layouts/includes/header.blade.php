@@ -1,7 +1,4 @@
-
-<!-- Header
-================================================== -->
-
+<!-- Header================================================== -->
 <div id="main-header">
 	<div class="container">
 
@@ -60,7 +57,7 @@
 									<a href="{{ route('blog') }}" @if ($current == 'blog') class="current" @endif>Блог</a>
 								</li>
 								<li>
-									<a href="{{ route('about-me') }}" @if ($current == 'about-me') class="current" @endif>Ооб-мне</a>
+									<a href="{{ route('about-me') }}" @if ($current == 'about-me') class="current" @endif>Обо мне</a>
 								</li>
 
 								<li>

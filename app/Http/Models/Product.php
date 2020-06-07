@@ -10,7 +10,7 @@ class Product extends Model
     protected $attribute = [
         'is_popular' => 0,
         'old_price' => 0,
-];
+    ];
 
     public function scopeActive($query){
         return $query->where('status', 1);
@@ -26,6 +26,10 @@ class Product extends Model
 
     public function category(){
         return $this->belongsTo(ProductCategory::class, 'category_id');
+    }
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
     }
 
 }

@@ -26,6 +26,7 @@ Route::get('/about', 'FrontendController@about')->name('about-me');
 
 Route::post('/send-order', 'FrontendController@sendOrder')->name('send_order');
 Route::post('/send-contact', 'FrontendController@sendContact')->name('send_contact');
+Route::post('/add-comment', 'FrontendController@addComment')->name('add_comment');
 
 Route::get('/project/{slug}', 'FrontendController@project')->name('project');
 

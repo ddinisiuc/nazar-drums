@@ -2,8 +2,7 @@
 @section('content')
 <div id="header-container" data-background="{{ asset('images/shop-parallax.jpg') }}" data-color="#303133"  data-color-opacity="0.7">
 @include('layouts.includes.header')
-<!-- Titlebar
-================================================== -->
+<!-- Titlebar================================================== -->
 <div id="titlebar" class="centered">
 	<div class="container">
 		<div class="row">
@@ -16,8 +15,7 @@
 
 </div>
 <div class="clearfix"></div>
-<!-- Content
-================================================== -->
+<!-- Content================================================== -->
 <div class="container">
 
 	<div class="row">
@@ -105,123 +103,38 @@
         </div>
 </section>
 	<!-- Contact Form / End -->
-<section>
-    <!-- Logo Carousel 2 -->
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="headline left with-border margin-top-60 margin-bottom-50">Похожие инструменты</h3>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12"> -->
-
-                <!-- Carousel -->
-                <!-- <div class="logo-carousel-alt">
-                    @forelse ($related_products as $item)
-                        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
-                    @empty
-
-                    @endforelse
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section> -->
 <!-- Logo Carousel 2 / End -->
-<!-- Projects Carousel -->
-<div class="container">
 
+<!-- Related Products Carousel -->
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="headline centered with-border margin-top-60">Projects Carousel</h3>
+			<h3 class="headline centered with-border margin-top-60">Похожие инструменты</h3>
 		</div>
 	</div>
 
 	<div class="row">
-
-		<!-- Projects -->
 		<div class="col-md-12 projects style-4 latest">
 			<div class="owl-carousel arrow-nav">
-				
-		<!-- Item -->
-			<!-- <div class="item">
-				<a href="single-project-content-right.html">
-				@forelse ($related_products as $item)
-                        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
+                <!-- Item -->
+                @forelse ($related_products as $item)
+                    <div class="item">
+                        <a href="{{ route('product_detail', $item->slug) }}">
+                            <img src="{{ Voyager::image($item->image) }}" alt=""/>
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <h4>{{ $item->title }}</h4>
+                                    <span>${{ $item->price }}</span>
+                                </div>
+                            </div>
+                            <div class="plus-icon"></div>
+                        </a>
+                    </div>
                     @empty
-
-                    @endforelse
-					<div class="overlay">
-						<div class="overlay-content">
-							<h4>Food Branding</h4>
-							<span>Nice Title Here</span>
-						</div>
-					</div>
-					<div class="plus-icon"></div>
-				</a>
-			</div> -->
-
-			<!-- Item -->
-			<div class="item">
-				<a href="single-project-before-after.html">
-					<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
-					<div class="overlay">
-						<div class="overlay-content">
-							<h4>Bilboard</h4>
-							<span>February 2016</span>
-						</div>
-					</div>
-					<div class="plus-icon"></div>
-				</a>
+                        <div>Похожих товаров нету</div>
+                @endforelse
 			</div>
-
-			<!-- Item -->
-			<div class="item">
-				<a href="single-project-content-right.html">
-				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
-					<div class="overlay">
-						<div class="overlay-content">
-							<h4>Coffee Cup</h4>
-							<span>January 2016</span>
-						</div>
-					</div>
-					<div class="plus-icon"></div>
-				</a>
-			</div>
-
-			<!-- Item -->
-			<div class="item">
-				<a href="single-project-before-after.html">
-				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
-					<div class="overlay">
-						<div class="overlay-content">
-							<h4>Wall Sign</h4>
-							<span>December 2016</span>
-						</div>
-					</div>
-					<div class="plus-icon"></div>
-				</a>
-			</div>
-
-			<!-- Item -->
-			<div class="item">
-				<a href="single-project-content-right.html">
-				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
-					<div class="overlay">
-						<div class="overlay-content">
-							<h4>Sketches</h4>
-							<span>November 2015</span>
-						</div>
-					</div>
-					<div class="plus-icon"></div>
-				</a>
-			</div>
-
-			</div>
-
 		</div>
 
 	</div>
@@ -231,24 +144,21 @@
 	<!-- Reviews -->
 <section class="comments">
     <div class="container">
-        <h3 class="headline margin-bottom-45">Comments <span class="comments-amount">(2)</span></h3>
+        <h3 class="headline margin-bottom-45">Comments <span class="comments-amount">({{ count($reviews) }})</span></h3>
 
         <ul>
-            <li>
-                <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-                <div class="comment-content"><div class="arrow-comment"></div>
-                    <div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
+            @forelse ($reviews as $item)
+                <li>
+                    <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+                    <div class="comment-content"><div class="arrow-comment"></div>
+                        <div class="comment-by">{{ $item->name }}<span class="date">{{ strftime("%B %d, %Y", strtotime($item->created_at)) }}</span>
+                        </div>
+                        <p>{!! $item->comment !!}</p>
                     </div>
-                    <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
-                </div>
-				<div class="margin-top-35"></div>
-                <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
-                <div class="comment-content"><div class="arrow-comment"></div>
-                    <div class="comment-by">John Doe<span class="date">15th, May 2015</span>
-                    </div>
-                    <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
-                </div>
-            </li>
+                </li>
+            @empty
+
+            @endforelse
         </ul>
     </div>
 </section>
@@ -262,25 +172,28 @@
         <div class="margin-top-15"></div>
 
         <!-- Add Comment Form -->
-        <form id="add-comment" class="add-comment">
+        <form action="{{ route('add_comment') }}" id="add_comment" class="add-comment">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $product_detail->id }}">
             <fieldset>
                 <div>
                     <label>Name:</label>
-                    <input type="text" value=""/>
+                    <input name="name" type="text"/>
                 </div>
 
                 <div>
                     <label>Email: <span>*</span></label>
-                    <input type="text" value=""/>
+                    <input name="email" type="email" value=""/>
                 </div>
 
                 <div>
                     <label>Comment: <span>*</span></label>
-                    <textarea cols="40" rows="3"></textarea>
+                    <textarea name="comment" cols="40" rows="3"></textarea>
                 </div>
             </fieldset>
 
-            <a href="#" class="button color border medium">Add Comment</a>
+            <input type="submit" class="submit button border center margin-top-10" id="submit" value="Add Comment" />
+
             <div class="clearfix"></div>
             <div class="margin-bottom-20"></div>
         </form>
@@ -291,4 +204,30 @@
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
+@endsection
+@section('scripts')
+<script>
+$('#add_comment').submit(function(){
+
+    var action = $(this).attr('action');
+
+    $('#add_comment #submit')
+        .after('<img src="/images/loader.gif" class="loader" />');
+
+        $('#submit')
+            .prop('disabled',true)
+            .addClass('disabled');
+
+        $.post(action, $('#add_comment').serialize(),
+            function(data){
+                console.log(data.message);
+                window.location.reload();
+                $('#add_comment img.loader').fadeOut('slow',function(){$(this).remove();});
+            }
+        );
+
+        return false;
+
+});
+</script>
 @endsection

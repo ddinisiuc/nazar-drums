@@ -36,7 +36,7 @@
                 <ul class="list-group category_list">
                     @forelse ($categories as $item)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="{{ $item->slug }}" style="text-decoration: none;"> {{ $item->title }}</a>
+                            <a href="{{ route('shop', $item->slug ) }}" style="text-decoration: none;"> {{ $item->title }}</a>
                             <span class="badge badge-primary badge-pill">{{ count($item->products) }}</span>
                         </li>
                     @empty
@@ -81,7 +81,7 @@
         <!-- Products -->
         <div class="col-md-9 col-sm-8">
 
-            <p class="margin-bottom-25 margin-left-10">Showing 1–9 of 23 results</p>
+            <p class="margin-bottom-25 margin-left-10">Найдено 1-{{ count($products) }} из {{ $nr_products }}  продуктов</p>
 
             <div class="row isotope-wrapper isotope-three-cols extra-gutter-left shop-wrapper">
 

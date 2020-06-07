@@ -10,6 +10,7 @@ use App\Models\Conctact;
 use App\Models\Post;
 use App\Models\Order;
 use App\Models\Project;
+use App\Models\Review;
 use App\Models\ProjectBenefit;
 use App\Models\Benefit;
 use App\Models\Testimonial;
@@ -31,21 +32,32 @@ class FrontendController extends Controller
         return $view;
     }
 
-    public function shop(){
+    public function shop(Request $request){
         $page = Page::active()->bySlug('shop')->firstOrFail();
-        $products = Product::active()->paginate(9);
+        $nr_products = count(Product::active()->get());
+
+        if($request->has('vargany')){
+            $products = Product::active()->where('product_category_id', 1)->paginate(9);
+
+        } else if($request->has('bubny')){
+            $products = Product::active()->where('product_category_id', 2)->paginate(9);
+        } else
+            $products = Product::active()->paginate(9);
+
         $popular_products = Product::active()->popular()->get();
         $categories = ProductCategory::active()->get();
 
-        return view('shop.products', compact('products', 'popular_products','categories', 'page'));
+        return view('shop.products', compact('products', 'popular_products','categories', 'page', 'nr_products'));
     }
 
     public function productDetail($slug){
         $product_detail = Product::active()->bySlug($slug)->firstOrfail();
         $products = Product::active()->get();
-        $related_products = Product::active()->where('product_category_id', $product_detail->product_category_id)->get();
+        $related_products = Product::active()->where('product_category_id', $product_detail->product_category_id)->where('id','!=',$product_detail->id)->get();
+        setlocale (LC_TIME, 'ru_RU.UTF-8', 'Rus');
+        $reviews = Review::where('product_id', $product_detail->id)->get();
 
-        return view('shop.product_detail', compact('product_detail', 'products', 'related_products'));
+        return view('shop.product_detail', compact('product_detail', 'products', 'related_products', 'reviews'));
     }
 
     public function about(){
@@ -98,8 +110,21 @@ class FrontendController extends Controller
 
     public function project($slug){
         $project = Project::active()->bySlug($slug)->firstOrFail();
-
+        setlocale (LC_TIME, 'ru_RU.UTF-8', 'Rus');
         return view('project', compact('project'));
+    }
+
+    public function addComment(Request $request){
+        $review = Review::create($request->all());
+
+        if(!$review){
+            return response(['status' => 0, 'Ошибка при lдобавления комментария ']);
+        } else {
+             return response([
+                 'status' => 1,
+                 'message' => 'Комментарий добавлен успешно']
+                );
+        }
     }
 
 }
