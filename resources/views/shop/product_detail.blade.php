@@ -59,182 +59,144 @@
 </div>
   <!-- Container / Start -->
 <section>
-<div class="container">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-8 col-md-offset-2">
+                <section id="contact">
+                    <h3 class="headline centered margin-bottom-45">Связаться</h3>
 
-<div class="row">
+                    <div id="contact-message"></div>
+                        <form method="post" action="{{ route('send_order') }}" name="contactform" id="contactform" autocomplete="on">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <input name="name" type="text" id="name" placeholder="Your Name" required="required" />
+                                    </div>
+                                </div>
 
-	<!-- Contact Form -->
-	<div class="col-md-8 col-md-offset-2">
+                                <div class="col-md-6">
+                                    <div>
+                                        <input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
+                                    </div>
+                                </div>
+                            </div>
 
-		<section id="contact">
-			<h3 class="headline centered margin-bottom-45">Связаться</h3>
+                            <div class="form-group col-md-14">
+                                <select name="product_id" id="inputState" class="form-control">
+                                    <option  selected>Choose...</option>
+                                    @forelse ($products as $item)
+                                        <option @if ($product_detail->slug == $item->slug) selected @endif value="{{ $item->id }}">{{ $item->title }}</option>
+                                    @empty
 
-			<div id="contact-message"></div>
+                                    @endforelse
+                                </select>
+                            </div>
+                            <div>
+                                <textarea name="message" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
+                            </div>
 
-				<form method="post" action="{{ route('send_order') }}" name="contactform" id="contactform" autocomplete="on">
-                    @csrf
-				<div class="row">
-					<div class="col-md-6">
-						<div>
-							<input name="name" type="text" id="name" placeholder="Your Name" required="required" />
-						</div>
-					</div>
+                            <input type="submit" class="submit button border center margin-top-10" id="submit" value="Submit Message" />
 
-					<div class="col-md-6">
-						<div>
-							<input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
-						</div>
-					</div>
-				</div>
-
-				<div class="form-group col-md-14">
-      					<select name="product_id" id="inputState" class="form-control">
-                            <option  selected>Choose...</option>
-                            @forelse ($products as $item)
-        					    <option @if ($product_detail->slug == $item->slug) selected @endif value="{{ $item->id }}">{{ $item->title }}</option>
-                            @empty
-
-                            @endforelse
-      					</select>
-    			</div>
-				<div>
-					<textarea name="message" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
-				</div>
-
-				<input type="submit" class="submit button border center margin-top-10" id="submit" value="Submit Message" />
-
-				</form>
-		</section>
-	</div>
+                        </form>
+                </section>
+            </div>
+        </div>
 </section>
 	<!-- Contact Form / End -->
 <section>
-		<!-- Logo Carousel 2 -->
-		<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h3 class="headline left with-border margin-top-60 margin-bottom-50">Похожие инструменты</h3>
-		</div>
+    <!-- Logo Carousel 2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="headline left with-border margin-top-60 margin-bottom-50">Похожие инструменты</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Carousel -->
+                <div class="logo-carousel-alt">
+                    @forelse ($related_products as $item)
+                        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
+                    @empty
+
+                    @endforelse
+                </div>
+
+            </div>
+
+
+
+
+        </div>
     </div>
-    
-	<div class="row">
-		<div class="col-md-12">
-
-			<!-- Carousel -->
-			<div class="logo-carousel-alt">
-                @forelse ($related_products as $item)
-			        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
-                @empty
-
-                @endforelse
-			</div>
-
-		</div>
-	
-	</div>
-</div>
 </section>
 <!-- Logo Carousel 2 / End -->
+
 	<!-- Reviews -->
-	<section class="comments">
-			<h3 class="headline margin-bottom-45">Comments <span class="comments-amount">(4)</span></h3>
+<section class="comments">
+    <div class="container">
+        <h3 class="headline margin-bottom-45">Comments <span class="comments-amount">(2)</span></h3>
 
-				<ul>
-					<li>
-						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-						<div class="comment-content"><div class="arrow-comment"></div>
-							<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
-								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-							</div>
-							<p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
-						</div>
+        <ul>
+            <li>
+                <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
+                <div class="comment-content"><div class="arrow-comment"></div>
+                    <div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
+                    </div>
+                    <p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
+                </div>
+				<div class="margin-top-35"></div>
+                <div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
+                <div class="comment-content"><div class="arrow-comment"></div>
+                    <div class="comment-by">John Doe<span class="date">15th, May 2015</span>
+                    </div>
+                    <p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="clearfix"></div>
+<div class="margin-top-35"></div>
 
-						<ul>
-							<li>
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-								<div class="comment-content"><div class="arrow-comment"></div>
-									<div class="comment-by">Tom Smith<span class="date">12th, June 2015</span>
-										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-									</div>
-									<p>Rrhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque.</p>
-								</div>
-							</li>
-							<li>
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-								<div class="comment-content"><div class="arrow-comment"></div>
-									<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
-										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-									</div>
-									<p>Nam posuere tristique sem, eu ultricies tortor.</p>
-								</div>
+<section class="add-comment">
+    <div class="container">
+           <!-- Add Comment -->
+        <h3 class="headline">Add Comment</h3>
+        <div class="margin-top-15"></div>
 
-								<ul>
-									<li>
-										<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-										<div class="comment-content"><div class="arrow-comment"></div>
-											<div class="comment-by">John Doe<span class="date">12th, June 2015</span>
-												<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-											</div>
-											<p>Great template!</p>
-										</div>
-									</li>
-								</ul>
+        <!-- Add Comment Form -->
+        <form id="add-comment" class="add-comment">
+            <fieldset>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" value=""/>
+                </div>
 
-							</li>
-						</ul>
+                <div>
+                    <label>Email: <span>*</span></label>
+                    <input type="text" value=""/>
+                </div>
 
-					</li>
+                <div>
+                    <label>Comment: <span>*</span></label>
+                    <textarea cols="40" rows="3"></textarea>
+                </div>
+            </fieldset>
 
-					<li>
-						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
-						<div class="comment-content"><div class="arrow-comment"></div>
-							<div class="comment-by">John Doe<span class="date">15th, May 2015</span>
-								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-							</div>
-							<p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
-						</div>
+            <a href="#" class="button color border medium">Add Comment</a>
+            <div class="clearfix"></div>
+            <div class="margin-bottom-20"></div>
+        </form>
+    </div>
+</section>
 
-					</li>
-				 </ul>
+<!-- Content / End -->
 
-			</section>
-			<div class="clearfix"></div>
-			<div class="margin-top-35"></div>
-
-
-			<!-- Add Comment -->
-			<h3 class="headline">Add Comment</h3>
-			<div class="margin-top-15"></div>
-
-			<!-- Add Comment Form -->
-			<form id="add-comment" class="add-comment">
-				<fieldset>
-
-					<div>
-						<label>Name:</label>
-						<input type="text" value=""/>
-					</div>
-
-					<div>
-						<label>Email: <span>*</span></label>
-						<input type="text" value=""/>
-					</div>
-
-					<div>
-						<label>Comment: <span>*</span></label>
-						<textarea cols="40" rows="3"></textarea>
-					</div>
-
-				</fieldset>
-
-				<a href="#" class="button color border medium">Add Comment</a>
-				<div class="clearfix"></div>
-				<div class="margin-bottom-20"></div>
-
-			</form>
-
-	</div>
-	<!-- Content / End -->
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
 @endsection
