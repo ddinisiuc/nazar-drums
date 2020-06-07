@@ -19,10 +19,12 @@ class CreateProductsTable extends Migration
             $table->string('slug', 100)->unique();
             $table->text('description');
             $table->double('price', 10, 2);
-            $table->double('old_price', 10, 2);
+            $table->double('old_price', 10, 2)->nullable()->default(0);
             $table->string('image', 255);
+            $table->string('youtube', 255)->nullable();
             $table->string('gallery', 1000);
-            $table->tinyInteger('category_id');
+            $table->tinyInteger('product_category_id');
+            $table->boolean('is_popular')->nullable()->default(0);
             $table->boolean('status')->nullable()->default(0);
             $table->integer('order')->nullable()->default(1);
             $table->timestamps();

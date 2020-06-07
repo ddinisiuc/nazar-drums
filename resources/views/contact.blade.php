@@ -5,7 +5,7 @@
 ================================================== -->
 
     <!-- Map Container -->
-    <div class="full-width-box-container margin-bottom-10">
+    {{-- <div class="full-width-box-container margin-bottom-10">
 
         <!-- Map -->
         <div class="col-lg-9 col-md-8">
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-    </div>
+    </div> --}}
     <!-- Map Container / End -->
 
     <!-- Container / Start -->
@@ -41,17 +41,16 @@
             <!-- Contact Details -->
             <div class="col-md-4">
 
-                <h3 class="headline margin-bottom-35">Find Us There</h3>
+                <h3 class="headline margin-bottom-35">{{ setting('contact.get_in_touch') }}</h3>
 
                 <!-- Contact Details -->
                 <div class="sidebar-textbox">
-                    <p>Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services.</p>
+                    <p>{{ $page->excerpt }}</p>
 
                     <ul class="contact-details">
-                        <li><i class="ln ln-icon-Phone-2"></i> <strong>Phone:</strong> <span>(123) 123-456 </span></li>
-                        <li><i class="ln ln-icon-Fax"></i> <strong>Fax:</strong> <span>(123) 123-456 </span></li>
-                        <li><i class="ln ln-icon-Globe"></i> <strong>Web:</strong> <span><a href="#">www.example.com</a></span></li>
-                        <li><i class="ln ln-icon-Envelope"></i> <strong>E-Mail:</strong> <span><a href="#">office@example.com</a></span></li>
+                        <li><i class="ln ln-icon-Phone-2"></i> <strong>{{ setting('contact.phone_label') }}</strong> <span><a href="tel:{{ setting('contact.phone_number') }}">{{ setting('contact.phone_number') }}</a> </span></li>
+                        <li><i class="ln ln-icon-Facebook"></i> <strong>{{ setting('contact.facebook_label') }}</strong> <span><a href="{{ setting('contact.facebook') }}">www.facebook.com</a></span></li>
+                        <li><i class="ln ln-icon-Envelope"></i> <strong>{{ setting('contact.email_label') }}</strong> <span><a href="mailto:{{ setting('contact.email') }}">{{ setting('contact.email') }}</a></span></li>
                     </ul>
                 </div>
 
@@ -61,12 +60,12 @@
             <div class="col-md-8">
 
                 <section id="contact">
-                    <h3 class="headline margin-bottom-45">Contact Form</h3>
+                    <h3 class="headline margin-bottom-45">{{ setting('contact.contact_form') }}</h3>
 
                     <div id="contact-message"></div>
 
-                    <form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="on">
-
+                    <form method="post" action="{{ route('send_contact') }}" name="contactform" id="contactform" autocomplete="on">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <div>
@@ -86,7 +85,7 @@
                         </div>
 
                         <div>
-                            <textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
+                            <textarea name="message" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
                         </div>
 
                         <input type="submit" class="submit button medium border" id="submit" value="Submit Message" />
@@ -105,7 +104,7 @@
 ================================================== -->
     <div class="margin-top-60"></div>
 
-  
+
 
     <!-- Back To Top Button -->
     <div id="backtotop">

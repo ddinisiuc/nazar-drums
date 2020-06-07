@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div id="header-container" data-background="images/shop-parallax.jpg" data-color="#303133"  data-color-opacity="0.7">
+<div id="header-container" data-background="{{ asset('images/shop-parallax.jpg') }}" data-color="#303133"  data-color-opacity="0.7">
 @include('layouts.includes.header')
 <!-- Titlebar
 ================================================== -->
@@ -8,15 +8,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-
-				<h2>Single Project - Content Bottom</h2>
-
-				<!-- Nav -->
-				<ul id="portfolio-nav">
-					<li class="next"><a href="single-project-creative-style-1.html"><i class="sl sl-icon-arrow-right"></i></a></li>
-					<li class="prev"><a href="single-project-content-left.html"><i class="sl sl-icon-arrow-left"></i></a></li>
-				</ul>
-
+				<h2>{{ $product_detail->title }}</h2>
 			</div>
 		</div>
 	</div>
@@ -32,8 +24,11 @@
 		<div class="col-md-12">
 			<div class="simple-slider">
 				<ul class="slides">
-					<li><img src="images/single-project-03a.jpg" alt=""/></li>
-					<li><img src="images/single-project-03b.jpg" alt=""/></li>
+					@php $gallery = json_decode($product_detail->gallery) @endphp
+                    @forelse ($gallery as $item)
+					    <li><img src="{{ Voyager::image($item) }}" alt=""/></li>
+                    @empty
+                    @endforelse
 				</ul>
 			</div>
 		</div>
@@ -42,22 +37,22 @@
 	<div class="row vanilla-content">
 
 		<div class="col-md-12">
-			<h3 class="margin-top-45 margin-bottom-30">Project Description</h3>
+			<h3 class="margin-top-45 margin-bottom-30">Описание продукта</h3>
 		</div>
 
 		<div class="col-md-8">
-				<p>Maecenas molestie fermentum luctus. Cras lacinia molestie nibh. Pellentesque non magna ac dui varius auctor at sed nunc. Fusce bibendum eros sed mattis accumsan. Nam mattis convallis elit, ut condimentum nulla commodo nec. Aenean eget metus sed turpis molestie porta vitae non libero.</p>
-				<p>Maecenas vehicula ultrices magna, vitae placerat nibh rhoncus sit amet. Vestibulum congue suscipit sagittis. Phasellus at dui eget metus consectetur laoreet id ac mi. Proin nisl mi, gravida sed maximus ut, sodales dictum velit. Nunc ultricies porttitor est, ut rutrum ante. Vivamus interdum sodales sem. In ultrices augue eget nibh convallis, quis laoreet tortor lacinia. </p>
+				{!! $product_detail->description !!}
 		</div>
 
 		<div class="col-md-4">
 			<ul class="details alt">
-				<li><span>Product Name:</span> My name</li>
-				<li><span>Price:</span> $100</li>
-				<li><span>Post :</span> <a href="#">Post Name (how it was made)</a>
+				<li><span>Название инструмента:</span> {{ $product_detail->title }}</li>
+				<li><span>Цена:</span> ${{ $product_detail->price }}</li>
+				{{-- <li><span>Post :</span> <a href="#">Post Name (how it was made)</a> --}}
 			</ul>
-
-			<!-- <a href="#" class="button fw medium border margin-top-15">Оставить заявку</a> -->
+            @if ($product_detail->youtube)
+                <a href="{{ $product_detail->youtube }}" target="_blank" class="button fw medium border margin-top-15">Просмотреть в Youtube</a>
+            @endif
 		</div>
 	</div>
 
@@ -72,12 +67,12 @@
 	<div class="col-md-8 col-md-offset-2">
 
 		<section id="contact">
-			<h3 class="headline centered margin-bottom-45">Get In Touch</h3>
+			<h3 class="headline centered margin-bottom-45">Связаться</h3>
 
 			<div id="contact-message"></div>
 
-				<form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="on">
-
+				<form method="post" action="{{ route('send_order') }}" name="contactform" id="contactform" autocomplete="on">
+                    @csrf
 				<div class="row">
 					<div class="col-md-6">
 						<div>
@@ -93,13 +88,17 @@
 				</div>
 
 				<div class="form-group col-md-14">
-      					<select id="inputState" class="form-control">
-        					<option selected>Choose...</option>
-        					<option>...</option>
+      					<select name="product_id" id="inputState" class="form-control">
+                            <option  selected>Choose...</option>
+                            @forelse ($products as $item)
+        					    <option @if ($product_detail->slug == $item->slug) selected @endif value="{{ $item->id }}">{{ $item->title }}</option>
+                            @empty
+
+                            @endforelse
       					</select>
     			</div>
 				<div>
-					<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
+					<textarea name="message" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
 				</div>
 
 				<input type="submit" class="submit button border center margin-top-10" id="submit" value="Submit Message" />
@@ -114,22 +113,20 @@
 		<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h3 class="headline left with-border margin-top-60 margin-bottom-50">Related products</h3>
+			<h3 class="headline left with-border margin-top-60 margin-bottom-50">Похожие инструменты</h3>
 		</div>
-	</div>
-
+    </div>
+    
 	<div class="row">
 		<div class="col-md-12">
 
 			<!-- Carousel -->
 			<div class="logo-carousel-alt">
-			    <div class="item"><img src="images/logo-01.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-02.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-03.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-04.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-05.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-06.png" alt="" /></div>
-			    <div class="item"><img src="images/logo-07.png" alt="" /></div>
+                @forelse ($related_products as $item)
+			        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
+                @empty
+
+                @endforelse
 			</div>
 
 		</div>

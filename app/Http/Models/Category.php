@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectBenefit extends Model
+class Category extends Model
 {
     protected $guarded = [''];
 
-    public function project(){
-        return $this->belongsTo(Project::class);
-    }
-
     public function scopeActive($query){
         return $query->where('status', 1);
+    }
+
+    public function scopeBySlug($query, $slug){
+        return $query->where('slug', $slug);
     }
 }

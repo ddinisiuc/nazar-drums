@@ -14,30 +14,23 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/', 'FrontendController@index')->name('index');
+Route::get('/', 'FrontendController@index')->name('home');
 
 Route::get('/shop', 'FrontendController@shop')->name('shop');
-
 Route::get('/product-detail/{slug}', 'FrontendController@productDetail')->name('product_detail');
+Route::get('/contact', 'FrontendController@contact')->name('contact');
+Route::get('/blog', 'FrontendController@blog')->name('blog');
+Route::get('/blog/{slug}', 'FrontendController@blogDetail')->name('blog_detail');
+Route::get('/about', 'FrontendController@about')->name('about-me');
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::post('/send-order', 'FrontendController@sendOrder')->name('send_order');
+Route::post('/send-contact', 'FrontendController@sendContact')->name('send_contact');
 
-Route::get('/blog', function () {
-    return view('blog.blog');
-})->name('blog');
+Route::get('/project/{slug}', 'FrontendController@project')->name('project');
 
-Route::get('/blog-detail', function () {
-    return view('blog.blog-detail');
-})->name('blog-detail');
 
-Route::get('/about-me', function () {
-    return view('about-me');
-})->name('about-me');
+
+
 
 

@@ -16,7 +16,7 @@ $(document).ready(function(){
 		// Isotope init
 		$(window).on('resize',setWidth);
 		isotopeInit();
-
+        
 		// Preloader init
 		preloaderLoad();
 

@@ -29,7 +29,7 @@
                             {{ $item->title }}
                         </div>
 
-                        <div class="caption-text">{{ $item->excerpt }}</div>
+                        <div class="caption-text">{!! $item->excerpt !!}</div>
                         <a href="{{ $item->btn_link }}" class="button medium">{{ $item->btn_label }}</a>
                     </div>
                 </li>
@@ -71,46 +71,24 @@
 
             <!-- Text Block -->
             <div class="col-md-4">
-                <h2 class="section-title margin-bottom-40"><strong>Be Familiar With Stunning Design</strong></h2>
+                <h2 class="section-title margin-bottom-40"><strong>{{ setting('index.benefits_title') }}</strong></h2>
             </div>
 
             <!-- Icons -->
             <div class="col-md-8">
 
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln  ln-icon-Rain-Drop"></i>
-                            <h4>Pixel Perfect</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                    @forelse ($benefits as $item)
+                        <div class="col-md-6 col-sm-6">
+                            <div class="icon-box-3">
+                                <i class="ln {{ $item->icon }}"></i>
+                                <h4>{{ $item->title }}</h4>
+                                {!! $item->description !!}
+                            </div>
                         </div>
-                    </div>
+                    @empty
 
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Anchor-2"></i>
-                            <h4>Solid Code</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Rotation"></i>
-                            <h4>Deeply Customizable</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Smartphone-3"></i>
-                            <h4>Mobile Optimised</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus.</p>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
 
@@ -121,17 +99,17 @@
 <!-- Section With Background / End -->
 
 <!-- Image Edge -->
-<div class="image-edge dark margin-top-0" data-background-image="images/footer_lodyas.png">
+<div class="image-edge dark margin-top-0" data-background-image="{{ Voyager::image(setting('index.left_block_bg')) }}">
 
     <div class="image-edge-content">
-        <h2>Don't Hestitate, Let Out Your Creative Beast</h2>
+        <h2>{{ setting('index.left_block_title') }}</h2>
         <br>
-        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation.</p>
+        {!! setting('index.left_block_description') !!}
         <br>
-        <a href="portfolio-full-width-style-1.html" class="button border medium white margin-bottom-40">View All Projects</a>
+        <a href="{{ setting('index.left_block_btn_link') }}" class="button border medium white margin-bottom-40">{{ setting('index.left_block_btn_label') }}</a>
     </div>
 
-    <div class="edge-bg" data-background-image="images/service-02c.jpg"></div>
+    <div class="edge-bg" data-background-image="{{ Voyager::image(setting('index.right_block_image')) }}"></div>
 
 </div>
 <!-- Image Edge / End -->
@@ -142,7 +120,7 @@
     <div class="isotope-sizer"></div>
 
     <!-- Item -->
-    <div class="isotope-item identity print">
+    {{-- <div class="isotope-item identity print">
         <a href="single-project-creative-style-1.html">
             <img src="images/project-01.jpg" alt="">
             <div class="overlay">
@@ -152,26 +130,26 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
     <!-- Item -->
-    {{-- @foreach ($products as $item)
+    @foreach ($products as $item)
         <div class="isotope-item  @if($loop->first) print  @endif @if($loop->last) identity @endif">
-            <a href="{{ $item->slug }}">
-                <img src="{{ Voyager::image($item) }}" alt="">
+            <a href="{{ route('product_detail', $item->slug) }}">
+                <img src="{{ Voyager::image($item->image) }}" alt="">
                 <div class="overlay">
                     <div class="overlay-content">
                         <h4>{{ $item->title }}</h4>
-                        <span>{{ $item }}</span>
+                        <span>{{ $item->created_at }}</span>
                     </div>
                 </div>
             </a>
         </div>
-    @endforeach --}}
+    @endforeach
 
 
     <!-- Item -->
-    <div class="isotope-item identity">
+    {{-- <div class="isotope-item identity">
         <a href="single-project-content-right.html">
             <img src="images/project-03-masonry.jpg" alt="">
             <div class="overlay">
@@ -233,9 +211,9 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
-    <!-- Item -->
+    {{-- <!-- Item -->
     <div class="isotope-item identity">
         <a href="single-project-content-right.html">
             <img src="images/project-08.jpg" alt="">
@@ -259,7 +237,7 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
 </div>
 <!-- Projects / End -->
@@ -267,7 +245,7 @@
 <div class="info-banner-fw">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">Заказать индивидуальный бубен  <a href="contact.html">Contact Us</a></div>
+            <div class="col-md-12">{{ setting('index.contact_text') }}  <a href="{{ route('contact') }}">{{ setting('index.contact') }}</a></div>
         </div>
     </div>
 </div>
@@ -404,5 +382,19 @@
 <script type="text/javascript" src="scripts/extensions/revolution.extension.parallax.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.slideanims.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.video.min.js"></script>
-
+<script>
+    // $(function() {
+    //     function isotopeInit() {
+	// 	$('.isotope-wrapper').isotope({
+	// 	  itemSelector: '.isotope-item',
+	// 	  percentPosition: false,
+	// 	  masonry: {
+	// 	    // use outer width of grid-sizer for columnWidth
+	// 	    columnWidth: '.isotope-sizer'
+	// 	  }
+	// 	})
+	// }
+    //     isotopeInit();
+    // });
+</script>
 @endsection
