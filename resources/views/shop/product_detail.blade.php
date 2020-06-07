@@ -130,6 +130,11 @@
 			</div>
 
 		</div>
+	
+	</div>
+</div>
+</section>
+<!-- Logo Carousel 2 / End -->
 	<!-- Reviews -->
 	<section class="comments">
 			<h3 class="headline margin-bottom-45">Comments <span class="comments-amount">(4)</span></h3>
@@ -200,7 +205,7 @@
 			<!-- Add Comment -->
 			<h3 class="headline">Add Comment</h3>
 			<div class="margin-top-15"></div>
-			
+
 			<!-- Add Comment Form -->
 			<form id="add-comment" class="add-comment">
 				<fieldset>
@@ -209,7 +214,7 @@
 						<label>Name:</label>
 						<input type="text" value=""/>
 					</div>
-						
+
 					<div>
 						<label>Email: <span>*</span></label>
 						<input type="text" value=""/>
@@ -230,14 +235,6 @@
 
 	</div>
 	<!-- Content / End -->
-
-
-
-	</div>
-</div>
-</section>
-<!-- Logo Carousel 2 / End -->
-
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
 @endsection
