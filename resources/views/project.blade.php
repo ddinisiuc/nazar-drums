@@ -60,7 +60,9 @@
 
     <div class="image-edge-content">
         <div class="row">
-            @forelse ($project_benefits as $item)
+
+            @forelse ($project->benefits as $item)
+            {{-- {{ dd( $item) }} --}}
                 <div class="col-md-6 col-sm-6">
                     <div class="icon-box-1">
                         <i class="ln {{ $item->icons }}"></i>

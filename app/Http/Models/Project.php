@@ -9,7 +9,7 @@ class Project extends Model
     protected $guarded = [''];
 
     public function benefits(){
-        return $this->hasMany(Benefit::class);
+        return $this->hasMany(ProjectBenefit::class);
     }
 
     public function scopeActive($query){

@@ -94,9 +94,8 @@ class FrontendController extends Controller
 
     public function project($slug){
         $project = Project::active()->bySlug($slug)->firstOrFail();
-        $project_benefits = ProjectBenefit::active()->get();
 
-        return view('project', compact('project', 'project_benefits'));
+        return view('project', compact('project'));
     }
 
 }
