@@ -1,4 +1,4 @@
-<script type="text/javascript" src="{{ asset('scripts/jquery-2.2.0.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('scripts/jquery2.2.0.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('scripts/jquery.flexslider-min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('scripts/owl.carousel.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('scripts/counterup.min.js') }}"></script>

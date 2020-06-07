@@ -10,39 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-
-Route::get('/shop', function () {
-    return view('shop.products');
-})->name('shop');
-
-Route::get('/shop-detail', function () {
-    return view('shop.product-detail');
-})->name('shop-detail');
-
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/blog', function () {
-    return view('blog.blog');
-})->name('blog');
-
-Route::get('/blog-detail', function () {
-    return view('blog.blog-detail');
-})->name('blog-detail');
-
-Route::get('/about-me', function () {
-    return view('about-me');
-})->name('about-me');
-
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/', 'FrontendController@index')->name('home');
+
+Route::get('/shop', 'FrontendController@shop')->name('shop');
+Route::get('/product-detail/{slug}', 'FrontendController@productDetail')->name('product_detail');
+Route::get('/contact', 'FrontendController@contact')->name('contact');
+Route::get('/blog', 'FrontendController@blog')->name('blog');
+Route::get('/blog/{slug}', 'FrontendController@blogDetail')->name('blog_detail');
+Route::get('/about', 'FrontendController@about')->name('about-me');
+
+
+Route::post('/send-order', 'FrontendController@sendOrder')->name('send_order');
+Route::post('/send-contact', 'FrontendController@sendContact')->name('send_contact');
+
+Route::get('/project/{slug}', 'FrontendController@project')->name('project');
+
+
+
+
+
+

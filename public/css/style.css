@@ -2874,7 +2874,8 @@ body #backtotop a { color: #fff; }
 	position: relative;
 	width: 100%;
 	display: inline-block;
-	margin: 20px 0;
+    margin: 20px 0;
+    min-height: 150px;
 }
 
 /* Edge Icon Box */
@@ -4523,7 +4524,10 @@ a.posts-category-link:hover {
 /* Post Container Image */
 .post-container .img-hover {
 	margin-bottom: 0;
-	vertical-align: bottom
+    vertical-align: bottom;
+}
+.related_post_img .img-hover{
+    height: 100%;
 }
 
 .post-container .img-hover img {
@@ -5466,7 +5470,7 @@ body .tags a { letter-spacing: 1px; text-transform: uppercase; }
 	right: 0px;
 	height: 100%;
 	background-size: 100%;
-	background-position: 50% 50%;
+	background-position: 90% 50%;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -6165,7 +6169,8 @@ html.fp-enabled,
 .flex-direction-nav {
 	margin: 0;
 	padding: 0;
-	list-style: none;
+    list-style: none;
+    max-height: 550px;
 }
 .flex-pauseplay span {
 	text-transform: capitalize;
@@ -6255,7 +6260,8 @@ html[xmlns] .flexslider .slides {
 
 .simple-slider {
 	position: relative;
-	overflow: hidden;
+    overflow: hidden;
+    max-height: 550px;
 }
 
 
@@ -11491,10 +11497,18 @@ body.loaded #header-container.moz-fix { opacity: 1; }
 	#reset a.button:hover { color: #333; background-color: #fff; }
 
 	@media only screen and (max-width: 1024px) {#style-switcher {display: none;}}
-	.category_list a { 
+	.category_list a {
 		color: #333333;
-		
-	   } 
+
+	   }
 	.category_list a:hover {
 		color: #337ab7;
 	}
+.related_post_img{
+    height: 170px;
+    overflow: hidden;
+}
+.related_post_img img{
+    object-fit: contain;
+    width: 100%;
+}

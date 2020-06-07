@@ -7,10 +7,10 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5 col-sm-6">
-				<img src="images/logo.png" alt="">
+				<img src="{{ Voyager::image(setting('index.logo')) }}" alt="">
 				<br><br>
-				<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi consequat libero ultricies laoreet ullamcorper phasellus semper.</p>
-				<a href="#" class="button social-btn"><i class="fa fa-facebook-official"></i> Like Us on Facebook</a>
+				{!! setting('footer.description') !!}
+				<a href="{{ setting('footer.fb_link') }}" class="button social-btn"><i class="fa fa-facebook-official"></i> {{ setting('footer.fb_label') }}</a>
 			</div>
 
 			<div class="col-md-4  col-sm-6">
@@ -29,24 +29,22 @@
 					<li><a href="#">Testimonials</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-			</div>		
+			</div>
 
 			<div class="col-md-3  col-sm-12">
-				<h4>Contact Us</h4>
+				<h4>{{ setting('footer.contact') }}</h4>
 				<div class="text-widget">
-					<span>12345 Little Lonsdale St, Melbourne</span> <br>
-					Phone: <span>(123) 123-456 </span><br>
-					Fax: <span>(123) 123-456</span> <br>
-					E-Mail:<span> office@example.com </span><br>
+					{{ setting('contact.phone_label') }} <span>{{ setting('contact.phone_number') }} </span><br>
+					{{ setting('contact.email_label') }}<span> {{ setting('contact.email') }} </span><br>
 				</div>
 			</div>
 
 		</div>
-		
+
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="copyrights">©  Copyright 2016 by <a href="#">Sphene</a>. All Rights Reserved.</div>
+				<div class="copyrights">©  Copyright {{ date('Y') }} by <a href="#">Atlas Software</a>. All Rights Reserved.</div>
 			</div>
 		</div>
 

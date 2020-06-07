@@ -14,27 +14,29 @@
     <!-- 5.0.7 auto mode -->
     <div id="rev_slider_4_1" class="rev_slider home fullwidthabanner" style="display:none;" data-version="5.0.7">
         <ul>
+            @foreach ($baner as $item)
+                <!-- Slide  -->
+                <li data-index="rs-.{{ $item->id }}" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
+
+                    <!-- Background -->
+                    <img src="{{ Voyager::image($item->image) }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
+
+                    <!-- Caption-->
+                    <div class="tp-caption custom-caption-2 tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-1-layer-2" data-x="['left','left','left','left']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['30']" data-width="['640','640', 640','420','320']" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
+
+                        <!-- Caption Content -->
+                        <div class="R_title margin-bottom-15" id="slide-2-layer-1" data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-20','-80']" data-fontsize="['52','46', '42','36','22']" data-lineheight="['78','68','70','55','35']" data-width="['640','640', 640','420','320']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:-50px;sX:2;sY:2;opacity:0;s:1000;e:Power4.easeOut;" data-transform_out="opacity:0;s:300;" data-start="600" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 6; color: #fff; letter-spacing: 0px; font-weight: 700; ">
+                            {{ $item->title }}
+                        </div>
+
+                        <div class="caption-text">{!! $item->excerpt !!}</div>
+                        <a href="{{ $item->btn_link }}" class="button medium">{{ $item->btn_label }}</a>
+                    </div>
+                </li>
+            @endforeach
 
             <!-- Slide  -->
-            <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
-
-                <!-- Background -->
-                <img src="images/slide-corporate-01.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
-
-                <!-- Caption-->
-                <div class="tp-caption custom-caption-2 tp-shape tp-shapewrapper tp-resizeme rs-parallaxlevel-0" id="slide-1-layer-2" data-x="['left','left','left','left']" data-hoffset="['0']" data-y="['middle','middle','middle','middle']" data-voffset="['30']" data-width="['640','640', 640','420','320']" data-height="auto" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:0;opacity:0;s:1000;e:Power2.easeOutExpo;s:400;e:Power2.easeOutExpo" data-transform_out="" data-mask_in="x:0px;y:[20%];s:inherit;e:inherit;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-responsive_offset="on">
-
-                    <!-- Caption Content -->
-                    <div class="R_title margin-bottom-15" id="slide-2-layer-1" data-x="['left','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-20','-80']" data-fontsize="['52','46', '42','36','22']" data-lineheight="['78','68','70','55','35']" data-width="['640','640', 640','420','320']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="y:-50px;sX:2;sY:2;opacity:0;s:1000;e:Power4.easeOut;" data-transform_out="opacity:0;s:300;" data-start="600" data-splitin="none" data-splitout="none" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 6; color: #fff; letter-spacing: 0px; font-weight: 700; ">Strategy Planning</div>
-
-                    <div class="caption-text">Interactively procrastinate high-payoff content without backward-compatible data. Quickly cultivate optimal processes and tactical architectures.</div>
-                    <a href="#" class="button medium">Read More</a>
-                </div>
-
-            </li>
-
-            <!-- Slide  -->
-            <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
+            {{-- <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-fstransition="fade" data-fsmasterspeed="800" data-fsslotamount="7" data-saveperformance="off">
 
                 <!-- Background -->
                 <img src="images/slide-corporate-02.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina data-kenburns="on" data-duration="12000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="112" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0">
@@ -49,7 +51,7 @@
                     <a href="#" class="button medium">Read More</a>
                 </div>
 
-            </li>
+            </li> --}}
 
         </ul>
         <div class="tp-static-layers"></div>
@@ -69,46 +71,24 @@
 
             <!-- Text Block -->
             <div class="col-md-4">
-                <h2 class="section-title margin-bottom-40"><strong>Be Familiar With Stunning Design</strong></h2>
+                <h2 class="section-title margin-bottom-40"><strong>{{ setting('index.benefits_title') }}</strong></h2>
             </div>
 
             <!-- Icons -->
             <div class="col-md-8">
 
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln  ln-icon-Rain-Drop"></i>
-                            <h4>Pixel Perfect</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                    @forelse ($benefits as $item)
+                        <div class="col-md-6 col-sm-6">
+                            <div class="icon-box-3">
+                                <i class="ln {{ $item->icon }}"></i>
+                                <h4>{{ $item->title }}</h4>
+                                {!! $item->description !!}
+                            </div>
                         </div>
-                    </div>
+                    @empty
 
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Anchor-2"></i>
-                            <h4>Solid Code</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Rotation"></i>
-                            <h4>Deeply Customizable</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                        <div class="icon-box-3">
-                            <i class="ln ln-icon-Smartphone-3"></i>
-                            <h4>Mobile Optimised</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus.</p>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
 
@@ -119,17 +99,17 @@
 <!-- Section With Background / End -->
 
 <!-- Image Edge -->
-<div class="image-edge dark margin-top-0" data-background-image="images/footer_lodyas.png">
+<div class="image-edge dark margin-top-0" data-background-image="{{ Voyager::image(setting('index.left_block_bg')) }}">
 
     <div class="image-edge-content">
-        <h2>Don't Hestitate, Let Out Your Creative Beast</h2>
+        <h2>{{ setting('index.left_block_title') }}</h2>
         <br>
-        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation.</p>
+        {!! setting('index.left_block_description') !!}
         <br>
-        <a href="portfolio-full-width-style-1.html" class="button border medium white margin-bottom-40">View All Projects</a>
+        <a href="{{ setting('index.left_block_btn_link') }}" class="button border medium white margin-bottom-40">{{ setting('index.left_block_btn_label') }}</a>
     </div>
 
-    <div class="edge-bg" data-background-image="images/service-02c.jpg"></div>
+    <div class="edge-bg" data-background-image="{{ Voyager::image(setting('index.right_block_image')) }}"></div>
 
 </div>
 <!-- Image Edge / End -->
@@ -140,7 +120,7 @@
     <div class="isotope-sizer"></div>
 
     <!-- Item -->
-    <div class="isotope-item identity print">
+    {{-- <div class="isotope-item identity print">
         <a href="single-project-creative-style-1.html">
             <img src="images/project-01.jpg" alt="">
             <div class="overlay">
@@ -150,23 +130,26 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
     <!-- Item -->
-    <div class="isotope-item print">
-        <a href="single-project-creative-style-2.html">
-            <img src="images/project-02.jpg" alt="">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h4>Bilboard</h4>
-                    <span>February 2016</span>
+    @foreach ($products as $item)
+        <div class="isotope-item  @if($loop->first) print  @endif @if($loop->last) identity @endif">
+            <a href="{{ route('product_detail', $item->slug) }}">
+                <img src="{{ Voyager::image($item->image) }}" alt="">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h4>{{ $item->title }}</h4>
+                        <span>{{ $item->created_at }}</span>
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
+    @endforeach
+
 
     <!-- Item -->
-    <div class="isotope-item identity">
+    {{-- <div class="isotope-item identity">
         <a href="single-project-content-right.html">
             <img src="images/project-03-masonry.jpg" alt="">
             <div class="overlay">
@@ -228,9 +211,9 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
-    <!-- Item -->
+    {{-- <!-- Item -->
     <div class="isotope-item identity">
         <a href="single-project-content-right.html">
             <img src="images/project-08.jpg" alt="">
@@ -254,7 +237,7 @@
                 </div>
             </div>
         </a>
-    </div>
+    </div> --}}
 
 </div>
 <!-- Projects / End -->
@@ -262,7 +245,7 @@
 <div class="info-banner-fw">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">Create Your Own Web Masterpiece <a href="contact.html">Contact Us</a></div>
+            <div class="col-md-12">{{ setting('index.contact_text') }}  <a href="{{ route('contact') }}">{{ setting('index.contact') }}</a></div>
         </div>
     </div>
 </div>
@@ -271,50 +254,20 @@
 <!-- Testimonials -->
 <section class="section-background with-testimonials" data-background-color="#222c42">
 
-    <h3>Who We Work With</h3>
+    <h3>Отзывы</h3>
 
     <div class="testimonial-carousel full-width arrows">
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Simple and clean - that's what people and me like the most. Beautifully crafted, well organized and thoroughly documented.</p>
-                <div class="testimonial-author">
-                    <h4>Garret Gravesen</h4>
-                    <span>Envato</span>
+        @foreach ($testimonials as $item)
+            <div class="item">
+                <div class="testimonial">
+                    <div class="testimonial-author">
+                        {!! $item->description !!}
+                        <h4>{{ $item->title }}</h4>
+                        <span>Envato</span>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Sphene is ridiculously powerful and easy to use, beginner or advanced. Always been on the hunt for handcrafted, clean themes.</p>
-                <div class="testimonial-author">
-                    <h4>Robert Lindstrom</h4>
-                    <span>Google</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>What impressed me was the fast response to questions and helpful community conversation in the support forums.</p>
-                <div class="testimonial-author">
-                    <h4>Thomas Johnson</h4>
-                    <span>Microsoft</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <div class="testimonial">
-                <p>Sphene is ridiculously powerful and easy to use, beginner or advanced. Always been on the hunt for handcrafted, clean themes.</p>
-                <div class="testimonial-author">
-                    <h4>John Smith</h4>
-                    <span>Adobe</span>
-                </div>
-            </div>
-        </div>
-
+        @endforeach
     </div>
 
 </section>
@@ -426,5 +379,19 @@
 <script type="text/javascript" src="scripts/extensions/revolution.extension.parallax.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.slideanims.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.video.min.js"></script>
-
+<script>
+    // $(function() {
+    //     function isotopeInit() {
+	// 	$('.isotope-wrapper').isotope({
+	// 	  itemSelector: '.isotope-item',
+	// 	  percentPosition: false,
+	// 	  masonry: {
+	// 	    // use outer width of grid-sizer for columnWidth
+	// 	    columnWidth: '.isotope-sizer'
+	// 	  }
+	// 	})
+	// }
+    //     isotopeInit();
+    // });
+</script>
 @endsection

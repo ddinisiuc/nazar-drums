@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>About Me</h2>
+                    <h2>{{ $page->title }}</h2>
                 </div>
             </div>
         </div>
@@ -22,14 +22,16 @@
 
         <!-- Text Block -->
         <div class="col-md-4">
-            <h3 class="about-me-title"><strong>Hi, I'm John Doe!</strong></h3>
+            <h3 class="about-me-title"><strong>Привет, меня зовут {{ App\User::first()->name }}!</strong></h3>
         </div>
 
         <!-- Skill bars -->
         <div class="col-md-8">
             <div class="row margin-top-20">
                 <div class="col-md-12">
-                    <p class="about-me-intro">I'm freelance web designer who creates beautiful and usable websites using best practice accessibility and the latest W3C web standards guidelines, resulting in semantic and seo friendly HTML5 and CSS.</p>
+                    <p class="about-me-intro">
+                        {!! $page->body !!}
+                    </p>
                 </div>
             </div>
         </div>
@@ -43,24 +45,24 @@
     <div class="container">
         <div class="row margin-top-15">
             <div class="col-md-4">
-                <h3 class="about-me-title"><strong>Web Design, Branding and UI/UX Design</strong></h3></div>
+                <h3 class="about-me-title"><strong>{{ $page->excerpt }}</strong></h3></div>
 
             <div class="col-md-8">
 
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="icon-box-3 rounded dark">
-                            <i class="ln ln-icon-Smartphone-3"></i>
-                            <h4>Responsive Design</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                            <i class="ln {{ setting('about.icon_one') }}"></i>
+                            <h4>{{ setting('about.title_one') }}</h4>
+                            {!! setting('about.description_one') !!}
                         </div>
                     </div>
 
                     <div class="col-md-6 col-sm-6">
                         <div class="icon-box-3 rounded dark">
-                            <i class="ln ln-icon-Sailing-Ship"></i>
-                            <h4>Social Media</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                            <i class="ln {{ setting('about.icon_two') }}"></i>
+                            <h4>{{ setting('about.title_two') }}</h4>
+                            {!! setting('about.description_two') !!}
                         </div>
                     </div>
                 </div>
@@ -68,17 +70,17 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="icon-box-3 rounded dark">
-                            <i class="ln ln-icon-Rotation"></i>
-                            <h4>Prototyping</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                            <i class="ln {{ setting('about.icon_three') }}"></i>
+                            <h4>{{ setting('about.title_three') }}</h4>
+                            {!! setting('about.description_three') !!}
                         </div>
                     </div>
 
                     <div class="col-md-6 col-sm-6">
                         <div class="icon-box-3 rounded dark">
-                            <i class="ln ln-icon-Code-Window"></i>
-                            <h4>CMS Systems</h4>
-                            <p>Pellentesque habitant morbi tristique senectus netus ante et malesuada fames ac turpis egestas maximus neque.</p>
+                            <i class="ln {{ setting('about.icon_three') }}"></i>
+                            <h4>{{ setting('about.title_four') }}</h4>
+                            {!! setting('about.description_four') !!}
                         </div>
                     </div>
                 </div>
@@ -93,20 +95,19 @@
 <div class="image-edge dark left margin-bottom-0">
 
     <div class="image-edge-content">
-        <h3 class="about-me-title margin-bottom-25"><strong>Get In Touch</strong></h3>
-        <p>Collaboratively administrate turnkey channels whereas virtual. Objectively seize scalable metrics whereas proactive.</p>
-
+        <h3 class="about-me-title margin-bottom-25"><strong>{{ setting('about.get_in_touch') }}</strong></h3>
+        {!! setting('about.get_it_touch_description') !!}
         <div class="sidebar-textbox">
             <ul class="contact-details">
-                <li><i class="ln ln-icon-Phone-2"></i> <strong>Phone:</strong> <span>(123) 123-456 </span></li>
-                <li><i class="ln ln-icon-Envelope"></i> <strong>E-Mail:</strong> <span><a href="#">office@example.com</a></span></li>
+                <li><i class="ln ln-icon-Phone-2"></i> <strong>{{ setting('contact.phone_label') }}</strong> <a style="color:white" href="tel:{{ setting('contact.phone_number') }}">{{ setting('contact.phone_number') }}</span></li>
+                <li><i class="ln ln-icon-Envelope"></i> <strong>{{ setting('contact.email_label') }}</strong> <span><a href="mailto:{{ setting('contact.email') }}">{{ setting('contact.email') }}</a></span></li>
             </ul>
             <div class="clearfix"></div>
 
             <!-- Social Icons / Start -->
             <ul class="social-icons color rounded margin-top-15">
                 <li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-                <li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
+                <li><a class="facebook" href="{{ setting('footer.fb_link') }}"><i class="icon-facebook"></i></a></li>
                 <li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
                 <li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
             </ul>

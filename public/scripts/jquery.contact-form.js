@@ -1,4 +1,4 @@
-  
+
 
 jQuery(document).ready(function(){
 
@@ -80,11 +80,11 @@ jQuery(document).ready(function(){
 
         $.post(action, $('#contactform').serialize(),
             function(data){
-                $('#contact-message').html( data );
+                $('#contact-message').html( data.message );
                 $('#contact-message').slideDown();
                 $('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
                 // $('#contactform #submit').removeAttr('disabled');
-                if(data.match('success') != null) $('#contactform').slideUp('slow');
+                if(data.status == 1) $('#contactform').slideUp('slow');
 
             }
         );
