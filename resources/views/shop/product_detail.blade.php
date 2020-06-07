@@ -107,7 +107,7 @@
 	<!-- Contact Form / End -->
 <section>
     <!-- Logo Carousel 2 -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h3 class="headline left with-border margin-top-60 margin-bottom-50">Похожие инструменты</h3>
@@ -115,10 +115,10 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12"> -->
 
                 <!-- Carousel -->
-                <div class="logo-carousel-alt">
+                <!-- <div class="logo-carousel-alt">
                     @forelse ($related_products as $item)
                         <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
                     @empty
@@ -127,15 +127,107 @@
                 </div>
 
             </div>
-
-
-
-
         </div>
     </div>
-</section>
+</section> -->
 <!-- Logo Carousel 2 / End -->
+<!-- Projects Carousel -->
+<div class="container">
 
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="headline centered with-border margin-top-60">Projects Carousel</h3>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<!-- Projects -->
+		<div class="col-md-12 projects style-4 latest">
+			<div class="owl-carousel arrow-nav">
+				
+		<!-- Item -->
+			<!-- <div class="item">
+				<a href="single-project-content-right.html">
+				@forelse ($related_products as $item)
+                        <div class="item"><img src="{{ Voyager::image($item->image) }}" alt=""/></div>
+                    @empty
+
+                    @endforelse
+					<div class="overlay">
+						<div class="overlay-content">
+							<h4>Food Branding</h4>
+							<span>Nice Title Here</span>
+						</div>
+					</div>
+					<div class="plus-icon"></div>
+				</a>
+			</div> -->
+
+			<!-- Item -->
+			<div class="item">
+				<a href="single-project-before-after.html">
+					<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h4>Bilboard</h4>
+							<span>February 2016</span>
+						</div>
+					</div>
+					<div class="plus-icon"></div>
+				</a>
+			</div>
+
+			<!-- Item -->
+			<div class="item">
+				<a href="single-project-content-right.html">
+				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h4>Coffee Cup</h4>
+							<span>January 2016</span>
+						</div>
+					</div>
+					<div class="plus-icon"></div>
+				</a>
+			</div>
+
+			<!-- Item -->
+			<div class="item">
+				<a href="single-project-before-after.html">
+				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h4>Wall Sign</h4>
+							<span>December 2016</span>
+						</div>
+					</div>
+					<div class="plus-icon"></div>
+				</a>
+			</div>
+
+			<!-- Item -->
+			<div class="item">
+				<a href="single-project-content-right.html">
+				<img src="{{ asset('/images/buben/1.jpg') }}" alt="">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h4>Sketches</h4>
+							<span>November 2015</span>
+						</div>
+					</div>
+					<div class="plus-icon"></div>
+				</a>
+			</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<!-- Projects Carousel / End -->
 	<!-- Reviews -->
 <section class="comments">
     <div class="container">
