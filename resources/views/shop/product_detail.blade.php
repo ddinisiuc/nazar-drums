@@ -64,7 +64,7 @@
             <!-- Contact Form -->
             <div class="col-md-8 col-md-offset-2">
                 <section id="contact">
-                    <h3 class="headline centered margin-bottom-45">Связаться</h3>
+                    <h3 class="headline contact_line centered margin-bottom-45">Связаться</h3>
 
                     <div id="contact-message"></div>
                         <form method="post" action="{{ route('send_order') }}" name="contactform" id="contactform" autocomplete="on">

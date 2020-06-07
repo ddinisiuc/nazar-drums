@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Conctact;
 use App\Models\Post;
+use App\Models\Order;
 use App\Models\Project;
 use App\Models\ProjectBenefit;
 use App\Models\Benefit;
@@ -43,6 +44,7 @@ class FrontendController extends Controller
         $product_detail = Product::active()->bySlug($slug)->firstOrfail();
         $products = Product::active()->get();
         $related_products = Product::active()->where('product_category_id', $product_detail->product_category_id)->get();
+
         return view('shop.product_detail', compact('product_detail', 'products', 'related_products'));
     }
 
@@ -75,15 +77,17 @@ class FrontendController extends Controller
     }
 
     public function sendOrder(Request $request){
-        dd($request->all());
-        return response($request->all());
+        $order = Order::create($request->all());
+        if(!$order)
+            return response(['status' => 1, 'message'=>'Ошибка при отправки заказа']);
+        return response(['status' => 1, 'message' =>'Спасибо за отпраку заказа, в ближайщее время с вами свяжутся']);
     }
 
     public function sendContact(Request $request){
         $contacts = Conctact::create($request->all());
 
         if(!$contacts){
-            return response('error with creating contact');
+            return response(['status' => 0, 'Ошибка при отправки контакта']);
         } else {
              return response([
                  'status' => 1,

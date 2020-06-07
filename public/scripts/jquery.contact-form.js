@@ -72,7 +72,7 @@ jQuery(document).ready(function(){
         var action = $(this).attr('action');
 
         $('#contact #submit')
-            .after('<img src="images/loader.gif" class="loader" />')
+            .after('<img src="/images/loader.gif" class="loader" />')
 
         $('#submit')
             .prop('disabled',true)
@@ -84,7 +84,11 @@ jQuery(document).ready(function(){
                 $('#contact-message').slideDown();
                 $('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
                 // $('#contactform #submit').removeAttr('disabled');
-                if(data.status == 1) $('#contactform').slideUp('slow');
+                if(data.status == 1){
+                    $('#contactform').slideUp('slow');
+                    $('.contact_line').html('').html('Отличное решение =)');
+                }
+
 
             }
         );
