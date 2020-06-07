@@ -38,10 +38,10 @@
                             @php $current = Route::currentRouteName(); @endphp
 							<ul class="menu alt2" id="responsive">
 								<li class="dropdown">
-									<a href="{{ route('home') }}" @if (Route::currentRouteName() == 'home') class="current" @endif>Home</a>
+									<a href="{{ route('home') }}" @if (Route::currentRouteName() == 'home') class="current" @endif>Главная</a>
 								</li>
 								<li class="dropdown">
-									<a onclick="return false" href="#" @if ($current == 'project') class="current" @endif>My projects</a>
+									<a onclick="return false" href="#" @if ($current == 'project') class="current" @endif>Мои Проекты</a>
 									<ul>
                                         @forelse ($projects as $item)
                                             <li>
@@ -53,18 +53,18 @@
 									</ul>
 								</li>
 								<li class="dropdown" >
-									<a href="{{ route('shop') }}" @if ($current == 'shop') class="current" @endif>Shop</a>
+									<a href="{{ route('shop') }}" @if ($current == 'shop') class="current" @endif>Магазин</a>
 								</li>
 
 								<li>
-									<a href="{{ route('blog') }}" @if ($current == 'blog') class="current" @endif>Blog</a>
+									<a href="{{ route('blog') }}" @if ($current == 'blog') class="current" @endif>Блог</a>
 								</li>
 								<li>
-									<a href="{{ route('about-me') }}" @if ($current == 'about-me') class="current" @endif>about-me</a>
+									<a href="{{ route('about-me') }}" @if ($current == 'about-me') class="current" @endif>Ооб-мне</a>
 								</li>
 
 								<li>
-									<a href="{{ route('contact') }}" @if ($current == 'contact') class="current" @endif>Contact</a>
+									<a href="{{ route('contact') }}" @if ($current == 'contact') class="current" @endif>Контанкты</a>
 								</li>
 							</ul>
 						</nav>
