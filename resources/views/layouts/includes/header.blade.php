@@ -61,7 +61,7 @@
 								</li>
 
 								<li>
-									<a href="{{ route('contact') }}" @if ($current == 'contact') class="current" @endif>Контанкты</a>
+									<a href="{{ route('contact') }}" @if ($current == 'contact') class="current" @endif>Контакты</a>
 								</li>
 							</ul>
 						</nav>

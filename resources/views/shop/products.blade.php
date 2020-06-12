@@ -34,6 +34,10 @@
                     <h4>Категории</h4>
                 </div>
                 <ul class="list-group category_list">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="{{ route('shop') }}" style="text-decoration: none;"> Все категории</a>
+                            <span class="badge badge-primary badge-pill"></span>
+                        </li>
                     @forelse ($categories as $item)
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <a href="{{ route('shop', $item->slug ) }}" style="text-decoration: none;"> {{ $item->title }}</a>
