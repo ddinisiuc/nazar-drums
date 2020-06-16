@@ -70,17 +70,17 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div>
-                                        <input name="name" type="text" id="name" placeholder="Your Name" required="required" />
+                                        <input name="name" type="text" id="name" placeholder="Имя" required="required" />
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div>
-                                        <input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
+                                        <input name="email" type="email" id="email" placeholder="Email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input name="phone" type="nomber" id="name" placeholder="Your phone" required="required" />
+                                    <input name="phone" type="nomber" id="name" placeholder="Телефон" required="required" />
                                 </div>
                             </div>
 
@@ -95,7 +95,7 @@
                                 </select>
                             </div>
                             <div>
-                                <textarea name="message" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
+                                <textarea name="message" cols="40" rows="3" id="comments" placeholder="Сообщение" spellcheck="true" required="required"></textarea>
                             </div>
 
                             <input type="submit" class="submit button border center margin-top-10" id="submit" value="Submit Message" />
