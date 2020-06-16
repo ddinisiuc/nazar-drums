@@ -79,6 +79,9 @@
                                         <input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <input name="phone" type="nomber" id="name" placeholder="Your phone" required="required" />
+                                </div>
                             </div>
 
                             <div class="form-group col-md-14">
@@ -184,10 +187,6 @@
                 <div>
                     <label>Email: <span>*</span></label>
                     <input name="email" type="email" value=""/>
-                </div>
-                <div>
-                    <label>Phone: <span>*</span></label>
-                    <input name="phone" type="phone" value=""/>
                 </div>
                 <div>
                     <label>Comment: <span>*</span></label>
