@@ -185,7 +185,10 @@
                     <label>Email: <span>*</span></label>
                     <input name="email" type="email" value=""/>
                 </div>
-
+                <div>
+                    <label>Phone: <span>*</span></label>
+                    <input name="phone" type="phone" value=""/>
+                </div>
                 <div>
                     <label>Comment: <span>*</span></label>
                     <textarea name="comment" cols="40" rows="3"></textarea>
