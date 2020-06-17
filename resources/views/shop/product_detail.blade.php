@@ -180,7 +180,7 @@
             <input type="hidden" name="product_id" value="{{ $product_detail->id }}">
             <fieldset>
                 <div>
-                    <label>Name:</label>
+                    <label>Имя:</label>
                     <input name="name" type="text"/>
                 </div>
 
@@ -189,7 +189,7 @@
                     <input name="email" type="email" value=""/>
                 </div>
                 <div>
-                    <label>Comment: <span>*</span></label>
+                    <label>Коментарии: <span>*</span></label>
                     <textarea name="comment" cols="40" rows="3"></textarea>
                 </div>
             </fieldset>
